@@ -1,0 +1,1498 @@
+"""Direct the client to resolve this field locally, either from the cache or local resolvers."""
+directive @client(
+  """
+  When true, the client will never use the cache for this value. See
+  https://www.apollographql.com/docs/react/essentials/local-state/#forcing-resolvers-with-clientalways-true
+  """
+  always: Boolean
+) on FIELD | FRAGMENT_DEFINITION | INLINE_FRAGMENT
+
+"""
+Export this locally resolved field as a variable to be used in the remainder of this query. See
+https://www.apollographql.com/docs/react/essentials/local-state/#using-client-fields-as-variables
+"""
+directive @export(
+  """The variable name to export this field as."""
+  as: String!
+) on FIELD
+
+"""
+Specify a custom store key for this result. See
+https://www.apollographql.com/docs/react/advanced/caching/#the-connection-directive
+"""
+directive @connection(
+  """Specify the store key."""
+  key: String!
+  """An array of query argument names to include in the generated custom store key."""
+  filter: [String!]
+) on FIELD
+
+input FileInfoInput {
+  name: String
+  alternativeText: String
+  caption: String
+}
+
+type UsersPermissionsMe {
+  id: ID!
+  username: String!
+  email: String!
+  confirmed: Boolean
+  blocked: Boolean
+  role: UsersPermissionsMeRole
+}
+
+type UsersPermissionsMeRole {
+  id: ID!
+  name: String!
+  description: String
+  type: String
+}
+
+input UsersPermissionsRegisterInput {
+  username: String!
+  email: String!
+  password: String!
+}
+
+input UsersPermissionsLoginInput {
+  identifier: String!
+  password: String!
+  provider: String = "local"
+}
+
+type UsersPermissionsLoginPayload {
+  jwt: String
+  user: UsersPermissionsMe!
+}
+
+type UserPermissionsPasswordPayload {
+  ok: Boolean!
+}
+
+type AboutUs {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  WhoIsUs: ComponentAboutWhoIsUs
+  OurLocations: ComponentGeralPresentationCard
+  WhyUs: ComponentAboutWhyUs
+  published_at: DateTime
+}
+
+input AboutUsInput {
+  WhoIsUs: ComponentAboutWhoIsUsInput
+  OurLocations: ComponentGeralPresentationCardInput
+  WhyUs: ComponentAboutWhyUsInput
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input editAboutUsInput {
+  WhoIsUs: editComponentAboutWhoIsUsInput
+  OurLocations: editComponentGeralPresentationCardInput
+  WhyUs: editComponentAboutWhyUsInput
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input updateAboutUsInput {
+  data: editAboutUsInput
+}
+
+type updateAboutUsPayload {
+  aboutUs: AboutUs
+}
+
+type deleteAboutUsPayload {
+  aboutUs: AboutUs
+}
+
+type AnnouncementCategory {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  title: String
+  published_at: DateTime
+  announcements(sort: String, limit: Int, start: Int, where: JSON): [Announcement!]!
+}
+
+type AnnouncementCategoryConnection {
+  values: [AnnouncementCategory]
+  groupBy: AnnouncementCategoryGroupBy
+  aggregate: AnnouncementCategoryAggregator
+}
+
+type AnnouncementCategoryAggregator {
+  count: Int
+  totalCount: Int
+}
+
+type AnnouncementCategoryGroupBy {
+  id: [AnnouncementCategoryConnectionId]
+  created_at: [AnnouncementCategoryConnectionCreated_at]
+  updated_at: [AnnouncementCategoryConnectionUpdated_at]
+  title: [AnnouncementCategoryConnectionTitle]
+  published_at: [AnnouncementCategoryConnectionPublished_at]
+}
+
+type AnnouncementCategoryConnectionId {
+  key: ID
+  connection: AnnouncementCategoryConnection
+}
+
+type AnnouncementCategoryConnectionCreated_at {
+  key: DateTime
+  connection: AnnouncementCategoryConnection
+}
+
+type AnnouncementCategoryConnectionUpdated_at {
+  key: DateTime
+  connection: AnnouncementCategoryConnection
+}
+
+type AnnouncementCategoryConnectionTitle {
+  key: String
+  connection: AnnouncementCategoryConnection
+}
+
+type AnnouncementCategoryConnectionPublished_at {
+  key: DateTime
+  connection: AnnouncementCategoryConnection
+}
+
+input AnnouncementCategoryInput {
+  title: String
+  announcements: [ID]
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input editAnnouncementCategoryInput {
+  title: String
+  announcements: [ID]
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input createAnnouncementCategoryInput {
+  data: AnnouncementCategoryInput
+}
+
+type createAnnouncementCategoryPayload {
+  announcementCategory: AnnouncementCategory
+}
+
+input updateAnnouncementCategoryInput {
+  where: InputID
+  data: editAnnouncementCategoryInput
+}
+
+type updateAnnouncementCategoryPayload {
+  announcementCategory: AnnouncementCategory
+}
+
+input deleteAnnouncementCategoryInput {
+  where: InputID
+}
+
+type deleteAnnouncementCategoryPayload {
+  announcementCategory: AnnouncementCategory
+}
+
+type Announcement {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  title: String
+  slug: String
+  content: String
+  image: UploadFile
+  description: String
+  buttonTitle: String
+  date: Date
+  singularExtLink: String
+  published_at: DateTime
+  announcement_categories(sort: String, limit: Int, start: Int, where: JSON): [AnnouncementCategory!]!
+}
+
+type AnnouncementConnection {
+  values: [Announcement]
+  groupBy: AnnouncementGroupBy
+  aggregate: AnnouncementAggregator
+}
+
+type AnnouncementAggregator {
+  count: Int
+  totalCount: Int
+}
+
+type AnnouncementGroupBy {
+  id: [AnnouncementConnectionId]
+  created_at: [AnnouncementConnectionCreated_at]
+  updated_at: [AnnouncementConnectionUpdated_at]
+  title: [AnnouncementConnectionTitle]
+  slug: [AnnouncementConnectionSlug]
+  content: [AnnouncementConnectionContent]
+  image: [AnnouncementConnectionImage]
+  description: [AnnouncementConnectionDescription]
+  buttonTitle: [AnnouncementConnectionButtonTitle]
+  date: [AnnouncementConnectionDate]
+  singularExtLink: [AnnouncementConnectionSingularExtLink]
+  published_at: [AnnouncementConnectionPublished_at]
+}
+
+type AnnouncementConnectionId {
+  key: ID
+  connection: AnnouncementConnection
+}
+
+type AnnouncementConnectionCreated_at {
+  key: DateTime
+  connection: AnnouncementConnection
+}
+
+type AnnouncementConnectionUpdated_at {
+  key: DateTime
+  connection: AnnouncementConnection
+}
+
+type AnnouncementConnectionTitle {
+  key: String
+  connection: AnnouncementConnection
+}
+
+type AnnouncementConnectionSlug {
+  key: String
+  connection: AnnouncementConnection
+}
+
+type AnnouncementConnectionContent {
+  key: String
+  connection: AnnouncementConnection
+}
+
+type AnnouncementConnectionImage {
+  key: ID
+  connection: AnnouncementConnection
+}
+
+type AnnouncementConnectionDescription {
+  key: String
+  connection: AnnouncementConnection
+}
+
+type AnnouncementConnectionButtonTitle {
+  key: String
+  connection: AnnouncementConnection
+}
+
+type AnnouncementConnectionDate {
+  key: ID
+  connection: AnnouncementConnection
+}
+
+type AnnouncementConnectionSingularExtLink {
+  key: String
+  connection: AnnouncementConnection
+}
+
+type AnnouncementConnectionPublished_at {
+  key: DateTime
+  connection: AnnouncementConnection
+}
+
+input AnnouncementInput {
+  title: String
+  announcement_categories: [ID]
+  slug: String
+  content: String
+  image: ID
+  description: String
+  buttonTitle: String
+  date: Date
+  singularExtLink: String
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input editAnnouncementInput {
+  title: String
+  announcement_categories: [ID]
+  slug: String
+  content: String
+  image: ID
+  description: String
+  buttonTitle: String
+  date: Date
+  singularExtLink: String
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input createAnnouncementInput {
+  data: AnnouncementInput
+}
+
+type createAnnouncementPayload {
+  announcement: Announcement
+}
+
+input updateAnnouncementInput {
+  where: InputID
+  data: editAnnouncementInput
+}
+
+type updateAnnouncementPayload {
+  announcement: Announcement
+}
+
+input deleteAnnouncementInput {
+  where: InputID
+}
+
+type deleteAnnouncementPayload {
+  announcement: Announcement
+}
+
+type Gallery {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  published_at: DateTime
+  images(sort: String, limit: Int, start: Int, where: JSON): [UploadFile!]!
+}
+
+input GalleryInput {
+  images: [ID]
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input editGalleryInput {
+  images: [ID]
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input updateGalleryInput {
+  data: editGalleryInput
+}
+
+type updateGalleryPayload {
+  gallery: Gallery
+}
+
+type deleteGalleryPayload {
+  gallery: Gallery
+}
+
+type Home {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  Services: ComponentGeralSimplePresentation
+  GetInTouch: ComponentGeralGetInTouch
+  published_at: DateTime
+  products(sort: String, limit: Int, start: Int, where: JSON): [Product!]!
+  announcements(sort: String, limit: Int, start: Int, where: JSON): [Announcement!]!
+}
+
+input HomeInput {
+  Services: ComponentGeralSimplePresentationInput
+  products: [ID]
+  announcements: [ID]
+  GetInTouch: ComponentGeralGetInTouchInput
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input editHomeInput {
+  Services: editComponentGeralSimplePresentationInput
+  products: [ID]
+  announcements: [ID]
+  GetInTouch: editComponentGeralGetInTouchInput
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input updateHomeInput {
+  data: editHomeInput
+}
+
+type updateHomePayload {
+  home: Home
+}
+
+type deleteHomePayload {
+  home: Home
+}
+
+type ProductCategory {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  title: String
+  description: String
+  buttonTitle: String
+  buttonLink: String
+  cover_image: UploadFile
+  published_at: DateTime
+  products(sort: String, limit: Int, start: Int, where: JSON): [Product!]!
+}
+
+type ProductCategoryConnection {
+  values: [ProductCategory]
+  groupBy: ProductCategoryGroupBy
+  aggregate: ProductCategoryAggregator
+}
+
+type ProductCategoryAggregator {
+  count: Int
+  totalCount: Int
+}
+
+type ProductCategoryGroupBy {
+  id: [ProductCategoryConnectionId]
+  created_at: [ProductCategoryConnectionCreated_at]
+  updated_at: [ProductCategoryConnectionUpdated_at]
+  title: [ProductCategoryConnectionTitle]
+  description: [ProductCategoryConnectionDescription]
+  buttonTitle: [ProductCategoryConnectionButtonTitle]
+  buttonLink: [ProductCategoryConnectionButtonLink]
+  cover_image: [ProductCategoryConnectionCover_image]
+  published_at: [ProductCategoryConnectionPublished_at]
+}
+
+type ProductCategoryConnectionId {
+  key: ID
+  connection: ProductCategoryConnection
+}
+
+type ProductCategoryConnectionCreated_at {
+  key: DateTime
+  connection: ProductCategoryConnection
+}
+
+type ProductCategoryConnectionUpdated_at {
+  key: DateTime
+  connection: ProductCategoryConnection
+}
+
+type ProductCategoryConnectionTitle {
+  key: String
+  connection: ProductCategoryConnection
+}
+
+type ProductCategoryConnectionDescription {
+  key: String
+  connection: ProductCategoryConnection
+}
+
+type ProductCategoryConnectionButtonTitle {
+  key: String
+  connection: ProductCategoryConnection
+}
+
+type ProductCategoryConnectionButtonLink {
+  key: String
+  connection: ProductCategoryConnection
+}
+
+type ProductCategoryConnectionCover_image {
+  key: ID
+  connection: ProductCategoryConnection
+}
+
+type ProductCategoryConnectionPublished_at {
+  key: DateTime
+  connection: ProductCategoryConnection
+}
+
+input ProductCategoryInput {
+  title: String
+  products: [ID]
+  description: String
+  buttonTitle: String
+  buttonLink: String
+  cover_image: ID
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input editProductCategoryInput {
+  title: String
+  products: [ID]
+  description: String
+  buttonTitle: String
+  buttonLink: String
+  cover_image: ID
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input createProductCategoryInput {
+  data: ProductCategoryInput
+}
+
+type createProductCategoryPayload {
+  productCategory: ProductCategory
+}
+
+input updateProductCategoryInput {
+  where: InputID
+  data: editProductCategoryInput
+}
+
+type updateProductCategoryPayload {
+  productCategory: ProductCategory
+}
+
+input deleteProductCategoryInput {
+  where: InputID
+}
+
+type deleteProductCategoryPayload {
+  productCategory: ProductCategory
+}
+
+type Product {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  title: String
+  description: String
+  slug: String
+  details: String
+  cover_image: UploadFile
+  detailsButton: String
+  product_category: ProductCategory
+  singularExtLink: String
+  published_at: DateTime
+  images(sort: String, limit: Int, start: Int, where: JSON): [UploadFile!]!
+}
+
+type ProductConnection {
+  values: [Product]
+  groupBy: ProductGroupBy
+  aggregate: ProductAggregator
+}
+
+type ProductAggregator {
+  count: Int
+  totalCount: Int
+}
+
+type ProductGroupBy {
+  id: [ProductConnectionId]
+  created_at: [ProductConnectionCreated_at]
+  updated_at: [ProductConnectionUpdated_at]
+  title: [ProductConnectionTitle]
+  description: [ProductConnectionDescription]
+  slug: [ProductConnectionSlug]
+  details: [ProductConnectionDetails]
+  cover_image: [ProductConnectionCover_image]
+  detailsButton: [ProductConnectionDetailsButton]
+  product_category: [ProductConnectionProduct_category]
+  singularExtLink: [ProductConnectionSingularExtLink]
+  published_at: [ProductConnectionPublished_at]
+}
+
+type ProductConnectionId {
+  key: ID
+  connection: ProductConnection
+}
+
+type ProductConnectionCreated_at {
+  key: DateTime
+  connection: ProductConnection
+}
+
+type ProductConnectionUpdated_at {
+  key: DateTime
+  connection: ProductConnection
+}
+
+type ProductConnectionTitle {
+  key: String
+  connection: ProductConnection
+}
+
+type ProductConnectionDescription {
+  key: String
+  connection: ProductConnection
+}
+
+type ProductConnectionSlug {
+  key: String
+  connection: ProductConnection
+}
+
+type ProductConnectionDetails {
+  key: String
+  connection: ProductConnection
+}
+
+type ProductConnectionCover_image {
+  key: ID
+  connection: ProductConnection
+}
+
+type ProductConnectionDetailsButton {
+  key: String
+  connection: ProductConnection
+}
+
+type ProductConnectionProduct_category {
+  key: ID
+  connection: ProductConnection
+}
+
+type ProductConnectionSingularExtLink {
+  key: String
+  connection: ProductConnection
+}
+
+type ProductConnectionPublished_at {
+  key: DateTime
+  connection: ProductConnection
+}
+
+input ProductInput {
+  title: String
+  description: String
+  slug: String
+  details: String
+  cover_image: ID
+  images: [ID]
+  detailsButton: String
+  product_category: ID
+  singularExtLink: String
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input editProductInput {
+  title: String
+  description: String
+  slug: String
+  details: String
+  cover_image: ID
+  images: [ID]
+  detailsButton: String
+  product_category: ID
+  singularExtLink: String
+  published_at: DateTime
+  created_by: ID
+  updated_by: ID
+}
+
+input createProductInput {
+  data: ProductInput
+}
+
+type createProductPayload {
+  product: Product
+}
+
+input updateProductInput {
+  where: InputID
+  data: editProductInput
+}
+
+type updateProductPayload {
+  product: Product
+}
+
+input deleteProductInput {
+  where: InputID
+}
+
+type deleteProductPayload {
+  product: Product
+}
+
+type I18NLocale {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  name: String
+  code: String
+}
+
+input LocaleInput {
+  name: String
+  code: String
+  created_by: ID
+  updated_by: ID
+}
+
+input editLocaleInput {
+  name: String
+  code: String
+  created_by: ID
+  updated_by: ID
+}
+
+type UploadFile {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  name: String!
+  alternativeText: String
+  caption: String
+  width: Int
+  height: Int
+  formats: JSON
+  hash: String!
+  ext: String
+  mime: String!
+  size: Float!
+  url: String!
+  previewUrl: String
+  provider: String!
+  provider_metadata: JSON
+  related(sort: String, limit: Int, start: Int, where: JSON): [Morph!]!
+}
+
+type UploadFileConnection {
+  values: [UploadFile]
+  groupBy: UploadFileGroupBy
+  aggregate: UploadFileAggregator
+}
+
+type UploadFileAggregator {
+  count: Int
+  totalCount: Int
+  sum: UploadFileAggregatorSum
+  avg: UploadFileAggregatorAvg
+  min: UploadFileAggregatorMin
+  max: UploadFileAggregatorMax
+}
+
+type UploadFileAggregatorSum {
+  width: Float
+  height: Float
+  size: Float
+}
+
+type UploadFileAggregatorAvg {
+  width: Float
+  height: Float
+  size: Float
+}
+
+type UploadFileAggregatorMin {
+  width: Float
+  height: Float
+  size: Float
+}
+
+type UploadFileAggregatorMax {
+  width: Float
+  height: Float
+  size: Float
+}
+
+type UploadFileGroupBy {
+  id: [UploadFileConnectionId]
+  created_at: [UploadFileConnectionCreated_at]
+  updated_at: [UploadFileConnectionUpdated_at]
+  name: [UploadFileConnectionName]
+  alternativeText: [UploadFileConnectionAlternativeText]
+  caption: [UploadFileConnectionCaption]
+  width: [UploadFileConnectionWidth]
+  height: [UploadFileConnectionHeight]
+  formats: [UploadFileConnectionFormats]
+  hash: [UploadFileConnectionHash]
+  ext: [UploadFileConnectionExt]
+  mime: [UploadFileConnectionMime]
+  size: [UploadFileConnectionSize]
+  url: [UploadFileConnectionUrl]
+  previewUrl: [UploadFileConnectionPreviewUrl]
+  provider: [UploadFileConnectionProvider]
+  provider_metadata: [UploadFileConnectionProvider_metadata]
+}
+
+type UploadFileConnectionId {
+  key: ID
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionCreated_at {
+  key: DateTime
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionUpdated_at {
+  key: DateTime
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionName {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionAlternativeText {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionCaption {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionWidth {
+  key: Int
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionHeight {
+  key: Int
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionFormats {
+  key: JSON
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionHash {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionExt {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionMime {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionSize {
+  key: Float
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionUrl {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionPreviewUrl {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionProvider {
+  key: String
+  connection: UploadFileConnection
+}
+
+type UploadFileConnectionProvider_metadata {
+  key: JSON
+  connection: UploadFileConnection
+}
+
+input FileInput {
+  name: String!
+  alternativeText: String
+  caption: String
+  width: Int
+  height: Int
+  formats: JSON
+  hash: String!
+  ext: String
+  mime: String!
+  size: Float!
+  url: String!
+  previewUrl: String
+  provider: String!
+  provider_metadata: JSON
+  related: [ID]
+  created_by: ID
+  updated_by: ID
+}
+
+input editFileInput {
+  name: String
+  alternativeText: String
+  caption: String
+  width: Int
+  height: Int
+  formats: JSON
+  hash: String
+  ext: String
+  mime: String
+  size: Float
+  url: String
+  previewUrl: String
+  provider: String
+  provider_metadata: JSON
+  related: [ID]
+  created_by: ID
+  updated_by: ID
+}
+
+input deleteFileInput {
+  where: InputID
+}
+
+type deleteFilePayload {
+  file: UploadFile
+}
+
+type UsersPermissionsPermission {
+  id: ID!
+  type: String!
+  controller: String!
+  action: String!
+  enabled: Boolean!
+  policy: String
+  role: UsersPermissionsRole
+}
+
+type UsersPermissionsRole {
+  id: ID!
+  name: String!
+  description: String
+  type: String
+  permissions(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsPermission!]!
+  users(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsUser!]!
+}
+
+type UsersPermissionsRoleConnection {
+  values: [UsersPermissionsRole]
+  groupBy: UsersPermissionsRoleGroupBy
+  aggregate: UsersPermissionsRoleAggregator
+}
+
+type UsersPermissionsRoleAggregator {
+  count: Int
+  totalCount: Int
+}
+
+type UsersPermissionsRoleGroupBy {
+  id: [UsersPermissionsRoleConnectionId]
+  name: [UsersPermissionsRoleConnectionName]
+  description: [UsersPermissionsRoleConnectionDescription]
+  type: [UsersPermissionsRoleConnectionType]
+}
+
+type UsersPermissionsRoleConnectionId {
+  key: ID
+  connection: UsersPermissionsRoleConnection
+}
+
+type UsersPermissionsRoleConnectionName {
+  key: String
+  connection: UsersPermissionsRoleConnection
+}
+
+type UsersPermissionsRoleConnectionDescription {
+  key: String
+  connection: UsersPermissionsRoleConnection
+}
+
+type UsersPermissionsRoleConnectionType {
+  key: String
+  connection: UsersPermissionsRoleConnection
+}
+
+input RoleInput {
+  name: String!
+  description: String
+  type: String
+  permissions: [ID]
+  users: [ID]
+  created_by: ID
+  updated_by: ID
+}
+
+input editRoleInput {
+  name: String
+  description: String
+  type: String
+  permissions: [ID]
+  users: [ID]
+  created_by: ID
+  updated_by: ID
+}
+
+input createRoleInput {
+  data: RoleInput
+}
+
+type createRolePayload {
+  role: UsersPermissionsRole
+}
+
+input updateRoleInput {
+  where: InputID
+  data: editRoleInput
+}
+
+type updateRolePayload {
+  role: UsersPermissionsRole
+}
+
+input deleteRoleInput {
+  where: InputID
+}
+
+type deleteRolePayload {
+  role: UsersPermissionsRole
+}
+
+type UsersPermissionsUser {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  username: String!
+  email: String!
+  provider: String
+  confirmed: Boolean
+  blocked: Boolean
+  role: UsersPermissionsRole
+}
+
+type UsersPermissionsUserConnection {
+  values: [UsersPermissionsUser]
+  groupBy: UsersPermissionsUserGroupBy
+  aggregate: UsersPermissionsUserAggregator
+}
+
+type UsersPermissionsUserAggregator {
+  count: Int
+  totalCount: Int
+}
+
+type UsersPermissionsUserGroupBy {
+  id: [UsersPermissionsUserConnectionId]
+  created_at: [UsersPermissionsUserConnectionCreated_at]
+  updated_at: [UsersPermissionsUserConnectionUpdated_at]
+  username: [UsersPermissionsUserConnectionUsername]
+  email: [UsersPermissionsUserConnectionEmail]
+  provider: [UsersPermissionsUserConnectionProvider]
+  confirmed: [UsersPermissionsUserConnectionConfirmed]
+  blocked: [UsersPermissionsUserConnectionBlocked]
+  role: [UsersPermissionsUserConnectionRole]
+}
+
+type UsersPermissionsUserConnectionId {
+  key: ID
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionCreated_at {
+  key: DateTime
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionUpdated_at {
+  key: DateTime
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionUsername {
+  key: String
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionEmail {
+  key: String
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionProvider {
+  key: String
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionConfirmed {
+  key: Boolean
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionBlocked {
+  key: Boolean
+  connection: UsersPermissionsUserConnection
+}
+
+type UsersPermissionsUserConnectionRole {
+  key: ID
+  connection: UsersPermissionsUserConnection
+}
+
+input UserInput {
+  username: String!
+  email: String!
+  provider: String
+  password: String
+  resetPasswordToken: String
+  confirmationToken: String
+  confirmed: Boolean
+  blocked: Boolean
+  role: ID
+  created_by: ID
+  updated_by: ID
+}
+
+input editUserInput {
+  username: String
+  email: String
+  provider: String
+  password: String
+  resetPasswordToken: String
+  confirmationToken: String
+  confirmed: Boolean
+  blocked: Boolean
+  role: ID
+  created_by: ID
+  updated_by: ID
+}
+
+input createUserInput {
+  data: UserInput
+}
+
+type createUserPayload {
+  user: UsersPermissionsUser
+}
+
+input updateUserInput {
+  where: InputID
+  data: editUserInput
+}
+
+type updateUserPayload {
+  user: UsersPermissionsUser
+}
+
+input deleteUserInput {
+  where: InputID
+}
+
+type deleteUserPayload {
+  user: UsersPermissionsUser
+}
+
+type ComponentAboutWhoIsUs {
+  id: ID!
+  title: String
+  description: String
+  phrase1: String
+  phrase2: String
+  phrase3: String
+  images(sort: String, limit: Int, start: Int, where: JSON): [UploadFile!]!
+}
+
+input ComponentAboutWhoIsUsInput {
+  title: String
+  description: String
+  images: [ID]
+  phrase1: String
+  phrase2: String
+  phrase3: String
+}
+
+input editComponentAboutWhoIsUsInput {
+  id: ID
+  title: String
+  description: String
+  images: [ID]
+  phrase1: String
+  phrase2: String
+  phrase3: String
+}
+
+type ComponentAboutWhyUsItems {
+  id: ID!
+  number: String
+  description: String
+}
+
+input ComponentAboutWhyUsItemInput {
+  number: String
+  description: String
+}
+
+input editComponentAboutWhyUsItemInput {
+  id: ID
+  number: String
+  description: String
+}
+
+type ComponentAboutWhyUs {
+  id: ID!
+  title: String
+  description: String
+  WhyUsItems: [ComponentAboutWhyUsItems]
+}
+
+input ComponentAboutWhyUsInput {
+  title: String
+  description: String
+  WhyUsItems: [ComponentAboutWhyUsItemInput]
+}
+
+input editComponentAboutWhyUsInput {
+  id: ID
+  title: String
+  description: String
+  WhyUsItems: [editComponentAboutWhyUsItemInput]
+}
+
+type ComponentGeralGetInTouch {
+  id: ID!
+  title: String
+  description: String
+}
+
+input ComponentGeralGetInTouchInput {
+  title: String
+  description: String
+}
+
+input editComponentGeralGetInTouchInput {
+  id: ID
+  title: String
+  description: String
+}
+
+type ComponentGeralPresentationCardCategory {
+  id: ID!
+  title: String
+  items: [ComponentGeralPresentationCardItems]
+}
+
+input ComponentGeralPresentationCardCategoryInput {
+  title: String
+  items: [ComponentGeralPresentationCardItemInput]
+}
+
+input editComponentGeralPresentationCardCategoryInput {
+  id: ID
+  title: String
+  items: [editComponentGeralPresentationCardItemInput]
+}
+
+type ComponentGeralPresentationCardItems {
+  id: ID!
+  image: UploadFile
+  title: String
+  description: String
+  buttonTitle: String
+  buttonLink: String
+}
+
+input ComponentGeralPresentationCardItemInput {
+  image: ID
+  title: String
+  description: String
+  buttonTitle: String
+  buttonLink: String
+}
+
+input editComponentGeralPresentationCardItemInput {
+  id: ID
+  image: ID
+  title: String
+  description: String
+  buttonTitle: String
+  buttonLink: String
+}
+
+type ComponentGeralPresentationCard {
+  id: ID!
+  title: String
+  description: String
+  category: [ComponentGeralPresentationCardCategory]
+}
+
+input ComponentGeralPresentationCardInput {
+  title: String
+  description: String
+  category: [ComponentGeralPresentationCardCategoryInput]
+}
+
+input editComponentGeralPresentationCardInput {
+  id: ID
+  title: String
+  description: String
+  category: [editComponentGeralPresentationCardCategoryInput]
+}
+
+type ComponentGeralSimplePresentationItems {
+  id: ID!
+  category: String
+  description: String
+  buttonTitle: String
+  buttonLink: String
+}
+
+input ComponentGeralSimplePresentationItemInput {
+  category: String
+  description: String
+  buttonTitle: String
+  buttonLink: String
+}
+
+input editComponentGeralSimplePresentationItemInput {
+  id: ID
+  category: String
+  description: String
+  buttonTitle: String
+  buttonLink: String
+}
+
+type ComponentGeralSimplePresentation {
+  id: ID!
+  title: String
+  description: String
+  extTitle: String
+  extLink: String
+  items: [ComponentGeralSimplePresentationItems]
+}
+
+input ComponentGeralSimplePresentationInput {
+  title: String
+  description: String
+  extTitle: String
+  extLink: String
+  items: [ComponentGeralSimplePresentationItemInput]
+}
+
+input editComponentGeralSimplePresentationInput {
+  id: ID
+  title: String
+  description: String
+  extTitle: String
+  extLink: String
+  items: [editComponentGeralSimplePresentationItemInput]
+}
+
+union Morph = UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsLoginPayload | UserPermissionsPasswordPayload | AboutUs | updateAboutUsPayload | deleteAboutUsPayload | AnnouncementCategory | AnnouncementCategoryConnection | AnnouncementCategoryAggregator | AnnouncementCategoryGroupBy | AnnouncementCategoryConnectionId | AnnouncementCategoryConnectionCreated_at | AnnouncementCategoryConnectionUpdated_at | AnnouncementCategoryConnectionTitle | AnnouncementCategoryConnectionPublished_at | createAnnouncementCategoryPayload | updateAnnouncementCategoryPayload | deleteAnnouncementCategoryPayload | Announcement | AnnouncementConnection | AnnouncementAggregator | AnnouncementGroupBy | AnnouncementConnectionId | AnnouncementConnectionCreated_at | AnnouncementConnectionUpdated_at | AnnouncementConnectionTitle | AnnouncementConnectionSlug | AnnouncementConnectionContent | AnnouncementConnectionImage | AnnouncementConnectionDescription | AnnouncementConnectionButtonTitle | AnnouncementConnectionDate | AnnouncementConnectionSingularExtLink | AnnouncementConnectionPublished_at | createAnnouncementPayload | updateAnnouncementPayload | deleteAnnouncementPayload | Gallery | updateGalleryPayload | deleteGalleryPayload | Home | updateHomePayload | deleteHomePayload | ProductCategory | ProductCategoryConnection | ProductCategoryAggregator | ProductCategoryGroupBy | ProductCategoryConnectionId | ProductCategoryConnectionCreated_at | ProductCategoryConnectionUpdated_at | ProductCategoryConnectionTitle | ProductCategoryConnectionDescription | ProductCategoryConnectionButtonTitle | ProductCategoryConnectionButtonLink | ProductCategoryConnectionCover_image | ProductCategoryConnectionPublished_at | createProductCategoryPayload | updateProductCategoryPayload | deleteProductCategoryPayload | Product | ProductConnection | ProductAggregator | ProductGroupBy | ProductConnectionId | ProductConnectionCreated_at | ProductConnectionUpdated_at | ProductConnectionTitle | ProductConnectionDescription | ProductConnectionSlug | ProductConnectionDetails | ProductConnectionCover_image | ProductConnectionDetailsButton | ProductConnectionProduct_category | ProductConnectionSingularExtLink | ProductConnectionPublished_at | createProductPayload | updateProductPayload | deleteProductPayload | I18NLocale | UploadFile | UploadFileConnection | UploadFileAggregator | UploadFileAggregatorSum | UploadFileAggregatorAvg | UploadFileAggregatorMin | UploadFileAggregatorMax | UploadFileGroupBy | UploadFileConnectionId | UploadFileConnectionCreated_at | UploadFileConnectionUpdated_at | UploadFileConnectionName | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionWidth | UploadFileConnectionHeight | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionExt | UploadFileConnectionMime | UploadFileConnectionSize | UploadFileConnectionUrl | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | deleteFilePayload | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleConnection | UsersPermissionsRoleAggregator | UsersPermissionsRoleGroupBy | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionType | createRolePayload | updateRolePayload | deleteRolePayload | UsersPermissionsUser | UsersPermissionsUserConnection | UsersPermissionsUserAggregator | UsersPermissionsUserGroupBy | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionCreated_at | UsersPermissionsUserConnectionUpdated_at | UsersPermissionsUserConnectionUsername | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionRole | createUserPayload | updateUserPayload | deleteUserPayload | ComponentAboutWhoIsUs | ComponentAboutWhyUsItems | ComponentAboutWhyUs | ComponentGeralGetInTouch | ComponentGeralPresentationCardCategory | ComponentGeralPresentationCardItems | ComponentGeralPresentationCard | ComponentGeralSimplePresentationItems | ComponentGeralSimplePresentation
+
+input InputID {
+  id: ID!
+}
+
+enum PublicationState {
+  LIVE
+  PREVIEW
+}
+
+type AdminUser {
+  id: ID!
+  username: String
+  firstname: String!
+  lastname: String!
+}
+
+type Query {
+  aboutUs(publicationState: PublicationState): AboutUs
+  announcementCategory(id: ID!, publicationState: PublicationState): AnnouncementCategory
+  announcementCategories(sort: String, limit: Int, start: Int, where: JSON, publicationState: PublicationState): [AnnouncementCategory!]!
+  announcementCategoriesConnection(sort: String, limit: Int, start: Int, where: JSON): AnnouncementCategoryConnection
+  announcement(id: ID!, publicationState: PublicationState): Announcement
+  announcements(sort: String, limit: Int, start: Int, where: JSON, publicationState: PublicationState): [Announcement!]!
+  announcementsConnection(sort: String, limit: Int, start: Int, where: JSON): AnnouncementConnection
+  gallery(publicationState: PublicationState): Gallery
+  home(publicationState: PublicationState): Home
+  productCategory(id: ID!, publicationState: PublicationState): ProductCategory
+  productCategories(sort: String, limit: Int, start: Int, where: JSON, publicationState: PublicationState): [ProductCategory!]!
+  productCategoriesConnection(sort: String, limit: Int, start: Int, where: JSON): ProductCategoryConnection
+  product(id: ID!, publicationState: PublicationState): Product
+  products(sort: String, limit: Int, start: Int, where: JSON, publicationState: PublicationState): [Product!]!
+  productsConnection(sort: String, limit: Int, start: Int, where: JSON): ProductConnection
+  files(sort: String, limit: Int, start: Int, where: JSON, publicationState: PublicationState): [UploadFile!]!
+  filesConnection(sort: String, limit: Int, start: Int, where: JSON): UploadFileConnection
+  role(id: ID!, publicationState: PublicationState): UsersPermissionsRole
+  """Retrieve all the existing roles. You can't apply filters on this query."""
+  roles(sort: String, limit: Int, start: Int, where: JSON, publicationState: PublicationState): [UsersPermissionsRole!]!
+  rolesConnection(sort: String, limit: Int, start: Int, where: JSON): UsersPermissionsRoleConnection
+  user(id: ID!, publicationState: PublicationState): UsersPermissionsUser
+  users(sort: String, limit: Int, start: Int, where: JSON, publicationState: PublicationState): [UsersPermissionsUser!]!
+  usersConnection(sort: String, limit: Int, start: Int, where: JSON): UsersPermissionsUserConnection
+  me: UsersPermissionsMe
+}
+
+type Mutation {
+  updateAboutUs(input: updateAboutUsInput): updateAboutUsPayload
+  deleteAboutUs: deleteAboutUsPayload
+  createAnnouncementCategory(input: createAnnouncementCategoryInput): createAnnouncementCategoryPayload
+  updateAnnouncementCategory(input: updateAnnouncementCategoryInput): updateAnnouncementCategoryPayload
+  deleteAnnouncementCategory(input: deleteAnnouncementCategoryInput): deleteAnnouncementCategoryPayload
+  createAnnouncement(input: createAnnouncementInput): createAnnouncementPayload
+  updateAnnouncement(input: updateAnnouncementInput): updateAnnouncementPayload
+  deleteAnnouncement(input: deleteAnnouncementInput): deleteAnnouncementPayload
+  updateGallery(input: updateGalleryInput): updateGalleryPayload
+  deleteGallery: deleteGalleryPayload
+  updateHome(input: updateHomeInput): updateHomePayload
+  deleteHome: deleteHomePayload
+  createProductCategory(input: createProductCategoryInput): createProductCategoryPayload
+  updateProductCategory(input: updateProductCategoryInput): updateProductCategoryPayload
+  deleteProductCategory(input: deleteProductCategoryInput): deleteProductCategoryPayload
+  createProduct(input: createProductInput): createProductPayload
+  updateProduct(input: updateProductInput): updateProductPayload
+  deleteProduct(input: deleteProductInput): deleteProductPayload
+  """Delete one file"""
+  deleteFile(input: deleteFileInput): deleteFilePayload
+  """Create a new role"""
+  createRole(input: createRoleInput): createRolePayload
+  """Update an existing role"""
+  updateRole(input: updateRoleInput): updateRolePayload
+  """Delete an existing role"""
+  deleteRole(input: deleteRoleInput): deleteRolePayload
+  """Create a new user"""
+  createUser(input: createUserInput): createUserPayload
+  """Update an existing user"""
+  updateUser(input: updateUserInput): updateUserPayload
+  """Delete an existing user"""
+  deleteUser(input: deleteUserInput): deleteUserPayload
+  upload(refId: ID, ref: String, field: String, source: String, info: FileInfoInput, file: Upload!): UploadFile!
+  multipleUpload(refId: ID, ref: String, field: String, source: String, files: [Upload]!): [UploadFile]!
+  updateFileInfo(id: ID!, info: FileInfoInput!): UploadFile!
+  login(input: UsersPermissionsLoginInput!): UsersPermissionsLoginPayload!
+  register(input: UsersPermissionsRegisterInput!): UsersPermissionsLoginPayload!
+  forgotPassword(email: String!): UserPermissionsPasswordPayload
+  resetPassword(password: String!, passwordConfirmation: String!, code: String!): UsersPermissionsLoginPayload
+  emailConfirmation(confirmation: String!): UsersPermissionsLoginPayload
+}
+
+"""The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)."""
+scalar JSON
+
+"""A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar."""
+scalar DateTime
+
+"""A time string with format: HH:mm:ss.SSS"""
+scalar Time
+
+"""A date string, such as 2007-12-03, compliant with the `full-date` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar."""
+scalar Date
+
+"""The `Long` scalar type represents 52-bit integers"""
+scalar Long
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload

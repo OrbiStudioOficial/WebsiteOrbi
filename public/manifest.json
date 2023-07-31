@@ -1,0 +1,21 @@
+{
+  "name": "Orbi Studio 3D",
+  "short_name": "Orbi Studio 3D",
+  "icons": [
+    {
+      "src": "/img/ORBI-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/ORBI-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#FAFAFA",
+  "description": "Onde a Criatividade Orbita e a Arquitetura ganha vida.",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#FAFAFA"
+}

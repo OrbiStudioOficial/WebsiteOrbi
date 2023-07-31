@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://casadeplacas.com.br
+
+# Sitemaps
+Sitemap: https://casadeplacas.com.br/sitemap.xml
