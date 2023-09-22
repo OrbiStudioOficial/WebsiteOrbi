@@ -5,8 +5,10 @@ export const Wrapper = styled.div`
   display: flex;
   gap: 5rem;
   @media (max-width: 1800px) {
-    display: flex;
     flex-wrap: wrap;
+  }
+  @media (max-width: 1500px) {
+    flex-direction: column;
   }
 
   ${media.lessThan('medium')`
@@ -16,6 +18,10 @@ export const Wrapper = styled.div`
 
 export const Dropdown = styled.div`
   width: 40rem;
+
+  ${media.lessThan('large')`
+  width: 65rem;
+  `}
 `
 
 export const Header = styled.div`
@@ -93,6 +99,10 @@ export const DropdownHeader = styled.div`
   line-height: normal;
   letter-spacing: 0.8px;
   text-transform: uppercase;
+
+  ${media.lessThan('large')`
+  width: 60rem;
+  `}
 `
 
 export const DropdownContent = styled.ul`

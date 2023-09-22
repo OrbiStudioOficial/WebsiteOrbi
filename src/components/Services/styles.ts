@@ -8,7 +8,11 @@ export const Container = styled.main`
   background-repeat: no-repeat;
   background-size: cover;
 
-  ${media.lessThan('medium')`
+  @media (max-width: 1600px) {
+    height: 110rem;
+  }
+
+  ${media.lessThan('large')`
     background-color: #000000;
     background-image: none;
   `}
@@ -16,6 +20,15 @@ export const Container = styled.main`
 
 export const Center = styled.div`
   width: 30%;
+
+  @media (max-width: 1800px) {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+
+  ${media.lessThan('huge')`
+  width: 90%;
+  `}
 
   ${media.lessThan('medium')`
   margin: 0;
@@ -29,11 +42,17 @@ export const Center = styled.div`
   `}
 `
 export const Info = styled.div`
-  padding-top: 12%;
+  padding-top: 10%;
   display: flex;
+  align-items: baseline;
   flex-direction: row;
   padding-left: 11.5rem;
   width: 100%;
+
+  ${media.lessThan('large')`
+  padding-top: 0%;
+  padding-left: 8rem;
+  `}
 
   ${media.lessThan('medium')`
   padding-left: 0rem;
@@ -64,6 +83,10 @@ export const Phrase1 = styled.h2`
     width: 70%;
   }
 
+  @media (max-width: 1800px) {
+    margin-top: 15rem;
+  }
+
   ${media.lessThan('huge')`
   margin-top: 20rem;
   width: 100%;
@@ -75,7 +98,7 @@ export const Phrase1 = styled.h2`
 `
 
 export const Phrase2 = styled.h4`
-  width: 60%;
+  width: 75%;
   color: #fff;
   font-family: Wix Madefor Display;
   font-size: 18px;

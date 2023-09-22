@@ -16,7 +16,7 @@ export const Fixed = styled.div<ButtonProps>`
   margin-top: -2rem;
 
   ${media.lessThan('large')`
-  grid-template-columns: repeat(auto-fit, minmax(50px, 170px));
+  grid-template-columns: repeat(auto-fit, minmax(50px, 165px));
     `}
 `
 
@@ -126,6 +126,10 @@ export const SubtitleMenu = styled.h6`
   ${({ theme }) => css`
     text-transform: uppercase;
     color: ${theme.colors.white};
+
+    ${media.lessThan('large')`
+  display: none;
+    `}
   `}
 `
 
