@@ -8,9 +8,7 @@
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
-    "schema:download": "apollo client:download-schema --endpoint=http://localhost:1337/graphql schema-temp.gql",
     "schema:convert": "node convertToNonNull.js",
-    "codegen": "apollo codegen:generate --target typescript --excludes=node_modules/ --includes=src/graphql/**/*.ts --localSchemaFile schema.gql --tagName=gql --outputFlat src/graphql/generated",
     "types:generate": "yarn schema:download && yarn schema:convert && yarn codegen",
     "generate": "yarn plop --plopfile generators/plopfile.js",
     "postinstall": "husky install",
@@ -22,7 +20,6 @@
     ]
   },
   "dependencies": {
-    "@apollo/client": "^3.3.7",
     "axios": "^0.27.2",
     "framer-motion": "^10.15.0",
     "graphql": "^15.4.0",
@@ -53,7 +50,6 @@
     "@types/styled-components": "^5.1.25",
     "@typescript-eslint/eslint-plugin": "5.30.7",
     "@typescript-eslint/parser": "5.30.7",
-    "apollo": "^2.32.1",
     "eslint": "^8.20.0",
     "eslint-config-next": "^12.2.2",
     "eslint-config-prettier": "^8.5.0",
