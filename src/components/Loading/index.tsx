@@ -27,6 +27,10 @@ const Content = styled.main`
   width: 100vw;
   height: 100vh;
   position: relative;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 const Section = styled.div`
   position: absolute;

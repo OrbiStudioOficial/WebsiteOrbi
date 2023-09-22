@@ -17,6 +17,11 @@ export const Fixed = styled.div<ButtonProps>`
 
   ${media.lessThan('large')`
   grid-template-columns: repeat(auto-fit, minmax(50px, 165px));
+
+    `}
+
+  ${media.lessThan('medium')`
+  margin-top: 1rem;
     `}
 `
 
@@ -24,13 +29,12 @@ export const Wrapper = styled.menu`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
-    background-color: transparent;
     padding: ${theme.spacings.xsmall} 0;
     position: fixed;
     z-index: ${theme.layers.menu};
     height: 100%;
+
     ${media.lessThan('medium')`
-      background-color: transparent;
       margin-left: 0;
       padding: 0;
     `}
@@ -52,7 +56,6 @@ export const LogoWrapper = styled.div`
     top: -1rem;
     left: 3rem;
     margin-left: 0;
-    width: 100%;
     height: auto;
   `}
 
@@ -75,7 +78,6 @@ export const LogoWrappertwo = styled.div`
     top: -1rem;
     left: 0;
     margin-left: 0;
-    width: 100%;
     height: auto;
     display: none;
   `}

@@ -1,29 +1,30 @@
-import Link from 'next/link'
 import * as S from './styles'
+
+import Link from 'next/link'
 
 const Contact = () => {
   return (
     <S.Container>
       <S.SectionIntro>
-        <S.SectionMobile>
-          <S.Phrase1>QUAL SERÁ O NOSSO PRÓXIMO PROJETO?</S.Phrase1>
-          <S.Phrase2>
-            envie-nos um e-mail para iniciarmos uma conversa:
-            <p className="paragraph">contato@orbi3d.com</p>
-          </S.Phrase2>
-          <S.Phrase2>
-            Se você precisar de orientação sobre quais informações devem ser
-            fornecidas, basta entrar em contato conosco via whatsapp:
-          </S.Phrase2>
-          <S.Button className="cta-02">
-            <span>ENTRAR EM CONTATO</span>
-          </S.Button>
-        </S.SectionMobile>
+        <S.Phrase1 id="contactSection">
+          QUAL SERÁ O NOSSO PRÓXIMO PROJETO?
+        </S.Phrase1>
+        <S.Phrase2>
+          Envie-nos um e-mail para iniciarmos uma conversa:
+          <p className="paragraph">contato@orbi3d.com</p>
+        </S.Phrase2>
+        <S.Phrase2>
+          Se você precisar de orientação sobre quais informações devem ser
+          fornecidas, basta entrar em contato conosco via whatsapp:
+        </S.Phrase2>
+        <S.Button className="cta-02">
+          <span>ENTRAR EM CONTATO</span>
+        </S.Button>
         <S.Infos>
           <div>
             <S.Info>QUESTÕES GERAIS</S.Info>
             <S.Description>
-              Se você tiver uma pergunta ou comentário, entre em contato:
+              Se você tiver uma pergunta ou comentário, entre em contato.
             </S.Description>
           </div>
 
@@ -51,7 +52,7 @@ const Contact = () => {
           <div>
             <S.Info>SIGA-NOS</S.Info>
             <S.Description>
-              Se você tiver uma pergunta ou comentário, entre em contato.
+              Siga nosso trabalho pelo o Instagram e no Behance.
             </S.Description>
           </div>
         </S.Infos>

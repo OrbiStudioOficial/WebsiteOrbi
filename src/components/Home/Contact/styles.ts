@@ -78,13 +78,10 @@ export const Phrase2 = styled.h4`
 
   ${media.lessThan('medium')`
     width: 90%;
+    margin-bottom: 1rem;
   `}
 
-  ${media.lessThan('small')`
-  margin-bottom: 1rem;
-  margin-top: 1rem;
 
-  `}
 
   .paragraph {
     color: #fff;
@@ -152,12 +149,12 @@ export const Infos = styled.div`
 
   ${media.lessThan('medium')`
   grid-template-columns: 1fr;
-  gap: 5rem;
+  gap: 2rem;
   top: 3%;
   `}
 
   ${media.lessThan('small')`
-  gap: 3rem;
+  gap: 1.6rem;
   `}
 `
 export const Info = styled.h4`
@@ -173,6 +170,10 @@ export const Info = styled.h4`
   margin-bottom: 2rem;
   padding-bottom: 1rem;
 
+  ${media.lessThan('medium')`
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  `}
   transition: color 0.5s ease-in-out;
 
   ::before {

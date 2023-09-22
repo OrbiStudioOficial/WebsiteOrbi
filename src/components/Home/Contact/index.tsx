@@ -10,7 +10,7 @@ const Contact = () => {
           QUAL SERÁ O NOSSO PRÓXIMO PROJETO?
         </S.Phrase1>
         <S.Phrase2>
-          envie-nos um e-mail para iniciarmos uma conversa:
+          Envie-nos um e-mail para iniciarmos uma conversa:
           <p className="paragraph">contato@orbi3d.com</p>
         </S.Phrase2>
         <S.Phrase2>

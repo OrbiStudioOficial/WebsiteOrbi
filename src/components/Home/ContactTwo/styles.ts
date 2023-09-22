@@ -10,7 +10,6 @@ export const Container = styled.main`
 `
 
 export const SectionIntro = styled.section`
-  padding-top: 8%;
   height: 100%;
   width: 100%;
   display: flex;
@@ -18,81 +17,71 @@ export const SectionIntro = styled.section`
   justify-content: center;
   padding-left: 11.5rem;
 
-  ${media.lessThan('medium')`
-  align-items: left;
-  padding: 0;
+  ${media.lessThan('large')`
+  padding-left: 6rem;
+  `}
+
+  ${media.lessThan('small')`
+  padding-left: 3rem;
   `}
 `
-export const SectionMobile = styled.section`
-  ${media.lessThan('medium')`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  `}
-`
+
 export const Phrase1 = styled.h2`
-  width: 16%;
+  width: 24%;
   color: #fff;
   font-family: Wix Madefor Display;
-  font-size: 40px;
+  font-size: 36px;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
   letter-spacing: 2px;
   text-transform: uppercase;
 
-  @media (min-width: 2700px) {
-    margin-top: -10rem;
-  }
-
-  @media (max-width: 1800px) {
-    width: 26%;
-  }
   ${media.lessThan('huge')`
+    width: 45%;
     font-size: 32px;
-    width: 32%;
   `}
 
   ${media.lessThan('large')`
-    font-size: 28px;
-    width: 36%;
+    width: 42%;
+    font-size: 30px;
   `}
 
   ${media.lessThan('medium')`
-    width: 100%;
+    width: 90%;
+  `}
+
+  ${media.lessThan('small')`
+  font-size: 24px;
   `}
 `
 
 export const Phrase2 = styled.h4`
   width: 16%;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   color: #fff;
   font-family: Wix Madefor Display;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   letter-spacing: 0.9px;
-  text-transform: uppercase;
-
-  @media (max-width: 1800px) {
-    width: 26%;
-  }
 
   ${media.lessThan('huge')`
-    font-size: 16px;
     width: 32%;
   `}
 
   ${media.lessThan('large')`
-    width: 36%;
+    width: 40%;
   `}
 
   ${media.lessThan('medium')`
-    width: 100%;
+    width: 90%;
+    margin-bottom: 1rem;
   `}
+
+
 
   .paragraph {
     color: #fff;
@@ -103,14 +92,15 @@ export const Phrase2 = styled.h4`
     line-height: normal;
     letter-spacing: 1px;
     transition: color 0.3s ease-in-out;
+    padding-top: 3rem;
+    @media (max-width: 400px) {
+      font-size: 14px;
+    }
 
-    ${media.lessThan('large')`
-      font-size: 16px;
-    `}
-    ${media.lessThan('medium')`
-      width: 60%;
-      padding-top: 2rem;
-    `}
+    ${media.lessThan('small')`
+    padding-top: 2.5rem;
+    padding-bottom: 0.5rem;
+  `}
   }
 
   .paragraph:hover {
@@ -131,6 +121,7 @@ export const Li = styled.li`
   line-height: normal;
   letter-spacing: 0.6px;
   text-transform: uppercase;
+  padding-bottom: 1.4rem;
 
   display: flex;
   width: max-content;
@@ -148,17 +139,22 @@ export const Infos = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   width: 40%;
 
-  @media (max-width: 1800px) {
+  @media screen and (max-width: 1700px) {
     width: 60%;
   }
 
   ${media.lessThan('large')`
-  width: 100%;
-
+  width: 90%;
   `}
 
   ${media.lessThan('medium')`
-  display: none;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  top: 3%;
+  `}
+
+  ${media.lessThan('small')`
+  gap: 1.6rem;
   `}
 `
 export const Info = styled.h4`
@@ -173,6 +169,12 @@ export const Info = styled.h4`
   text-transform: uppercase;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
+
+  ${media.lessThan('medium')`
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  `}
+  transition: color 0.5s ease-in-out;
 
   ::before {
     content: '';
@@ -201,6 +203,10 @@ export const Description = styled.p`
   line-height: normal;
   letter-spacing: 0.6px;
   text-transform: uppercase;
+
+  ${media.lessThan('small')`
+  width: 90%;
+  `}
 `
 
 export const Button = styled.button`
@@ -219,10 +225,9 @@ export const Button = styled.button`
   cursor: pointer;
   border: none;
   color: #000000;
-  padding: 1rem;
 
-  ${media.lessThan('medium')`
-    width: 100%;
+  ${media.lessThan('small')`
+  padding: 2rem 1rem;
   `}
 
   span {

@@ -112,7 +112,6 @@ export const Phrase3 = styled.p`
   ${({ theme }) => css`
     font-family: ${theme.font.normal};
     color: ${theme.colors.white};
-    text-transform: uppercase;
     padding-top: 2rem;
     font-weight: 200;
     font-size: 18px;
