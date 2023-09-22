@@ -8,7 +8,7 @@ export default {
   },
   font: {
     family:
-      "Red Hat Display, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+      "Wix Madefor Display, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     light: 300,
     normal: 600,
     bold: 900,
@@ -24,11 +24,11 @@ export default {
     }
   },
   colors: {
-    primary: '#002759',
-    secondary: '#C9B559',
-    mainBg: '#FAFAFA',
-    white: '#FAFAFA',
-    black: '#030517',
+    primary: '#ED533F',
+    secondary: '#4A25AA',
+    mainBg: '#000000',
+    white: '#ffffff',
+    black: '#000000',
     lightGray: '#EAEAEA',
     gray: '#8F8F8F',
     darkGray: '#2E2F42'

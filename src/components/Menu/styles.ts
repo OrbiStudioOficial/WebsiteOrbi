@@ -1,18 +1,38 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
+interface ButtonProps {
+  isHome: boolean
+}
+
+export const Fixed = styled.div<ButtonProps>`
+  position: ${({ isHome }) => (isHome ? 'absolute' : 'absolute')};
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 350px));
+  align-items: center;
+  /* backdrop-filter: blur(4px); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  margin-top: -2rem;
+
+  ${media.lessThan('large')`
+  grid-template-columns: repeat(auto-fit, minmax(50px, 170px));
+    `}
+`
+
 export const Wrapper = styled.menu`
   ${({ theme }) => css`
     display: flex;
-    align-items: center;
-    background-color: ${theme.colors.primary};
+    flex-direction: column;
+    background-color: transparent;
     padding: ${theme.spacings.xsmall} 0;
-    position: relative;
+    position: fixed;
     z-index: ${theme.layers.menu};
+    height: 100%;
     ${media.lessThan('medium')`
-      background-color: ${theme.colors.primary};
+      background-color: transparent;
       margin-left: 0;
-      padding: 2rem;
+      padding: 0;
     `}
   `}
 `
@@ -23,33 +43,106 @@ export const LogoWrapper = styled.div`
   flex-grow: 1;
   justify-content: flex-start;
   cursor: pointer;
-  margin-left: 10rem;
+  margin-left: 8.5rem;
+  width: 22rem;
+  height: 15rem;
+
   ${media.lessThan('medium')`
     position: absolute;
-    left: 40%;
-    margin: 0rem;
-    transform: translateX(-50%);
-    svg {
-      width: 20rem;
-    }
+    top: -1rem;
+    left: 3rem;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
   `}
+
+  ${media.lessThan('small')`
+    left: 0rem;
+  `}
+`
+
+export const LogoWrappertwo = styled.div`
+  display: flex;
+  margin: 0;
+  flex-grow: 1;
+  justify-content: flex-start;
+  cursor: pointer;
+  margin-left: 8.5rem;
+  width: 22rem;
+  height: 15rem;
+  ${media.lessThan('medium')`
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+    display: none;
+  `}
+
+  ${media.lessThan('large')`
+  margin-left: 4rem;
+    `}
 `
 
 export const IconWrapper = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.white};
+    position: absolute;
+    right: 4rem;
+    top: 4rem;
     cursor: pointer;
     width: 2.4rem;
     height: 2.4rem;
+
+    ${media.greaterThan('medium')`
+    right: 6rem;
+  `}
+  `}
+`
+
+export const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  ${media.lessThan('medium')`
+    display: none;
+  `}
+
+  ${media.lessThan('large')`
+  margin-left: 7.5rem;
+
+    `}
+`
+
+export const TitleMenu = styled.h2`
+  ${({ theme }) => css`
+    color: ${theme.colors.white};
+
+    ${media.lessThan('large')`
+  font-size: 2rem;
+    `}
+  `}
+`
+export const SubtitleMenu = styled.h6`
+  ${({ theme }) => css`
+    text-transform: uppercase;
+    color: ${theme.colors.white};
   `}
 `
 
 export const MenuGroup = styled.ul`
   display: flex;
   flex-grow: 1;
-  justify-content: right;
-  align-items: right;
-  margin-right: 10rem;
+  justify-content: left;
+  align-items: left;
+
+  ${media.lessThan('medium')`
+  display: none;
+  `}
+
+  ${media.lessThan('large')`
+  margin-left: 5.5rem;
+    `}
 `
 
 export const MenuButtonGroup = styled.ul`
@@ -90,7 +183,6 @@ export const MenuLink = styled.a`
         display: block;
         height: 0.3rem;
         background-color: ${theme.colors.white};
-        animation: hoverAnimation 0.2s forwards;
         ${media.greaterThan('medium')`
           background-color: ${theme.colors.white};
         `}
@@ -130,6 +222,12 @@ export const MenuFull = styled.nav<MenuFullProps>`
     transition: opacity 0.3s ease-in-out;
     opacity: ${isOpen ? 1 : 0};
     pointer-events: ${isOpen ? 'all' : 'none'};
+
+    .bnt-close {
+      position: absolute;
+      top: 3%;
+      right: 6%;
+    }
     > svg {
       position: absolute;
       top: 0;
@@ -328,4 +426,22 @@ export const DropDownList = styled.ul`
     &:first-child {
       margin-top: 0rem;
   `}
+`
+
+export const StyledMenuLink = styled.a<{ active: boolean }>`
+  color: ${(props) => (props.active ? '#ED533F' : '#FFF')};
+  padding-left: 2rem;
+  text-decoration: none;
+  font-family: Wix Madefor Display;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  ${media.lessThan('large')`
+  font-size: 14px;
+  padding-left: 1.2rem;
+    `}
 `

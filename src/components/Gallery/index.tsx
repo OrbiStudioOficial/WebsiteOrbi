@@ -1,86 +1,196 @@
-import { useState, useRef } from 'react'
-import { ArrowBackIos as ArrowLeft } from '@styled-icons/material-outlined/ArrowBackIos'
-import { ArrowForwardIos as ArrowRight } from '@styled-icons/material-outlined/ArrowForwardIos'
-import SlickSlider from 'react-slick'
-
-import Slider, { SliderSettings } from 'components/Slider'
 import * as S from './styles'
 
-const commonSettings: SliderSettings = {
-  infinite: false,
-  lazyLoad: 'progressive',
-  arrows: false,
-  nextArrow: <ArrowRight aria-label="next image" />,
-  prevArrow: <ArrowLeft aria-label="previous image" />
-}
+import Image from 'next/image'
 
-const settings: SliderSettings = {
-  ...commonSettings,
-  slidesToShow: 8,
-  speed: 500,
-  swipeToSlide: true,
-  responsive: [
-    {
-      breakpoint: 1375,
-      settings: {
-        arrows: false,
-        slidesToShow: 8,
-        draggable: true
-      }
-    },
-    {
-      breakpoint: 1024,
-      settings: {
-        arrows: false,
-        slidesToShow: 6,
-        draggable: true
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        slidesToShow: 4,
-        draggable: true
-      }
-    }
-  ]
-}
-
-export type GalleryImageProps = {
-  src: string
-  label: string
-}
-
-export type GalleryProps = {
-  items: GalleryImageProps[]
-}
-
-const Gallery = ({ items }: GalleryProps) => {
-  const slider = useRef<SlickSlider>(null)
-  const [selectedImg, setSelectedImg] = useState(items[0].src)
+const Gallery = () => {
   return (
-    <S.Wrapper>
-      <S.SelectedImage>
-        <img src={selectedImg} alt="selected" />
-      </S.SelectedImage>
-      <S.NonSelectedImage>
-        <Slider ref={slider} settings={settings}>
-          {items.map((item, index) => (
-            <img
-              role="button"
-              key={`thumb-${index}`}
-              src={item.src}
-              alt={`Thumb - ${item.label}`}
-              onClick={() => {
-                slider.current!.slickGoTo(index, true)
-                setSelectedImg(item.src)
-              }}
+    <S.Container className="slide-in">
+      <S.GalleryContainer>
+        <S.GalleryItem>
+          <S.Front>
+            <Image
+              src={'/img/fundointro.png'}
+              alt="imagem 01"
+              width={650}
+              height={600}
             />
-          ))}
-        </Slider>
-      </S.NonSelectedImage>
-    </S.Wrapper>
+          </S.Front>
+          <S.Info>
+            <S.Wrapper>
+              <S.Title>PROJETO 01</S.Title>
+              <S.Description>
+                Projeto de interiores desenvolvido para a WDG Engenharia,
+                resultando em ambientes sofisticados e funcionais. Com atenção
+                aos detalhes e uma abordagem personalizada, criamos espaços que
+                refletem a identidade e as necessidades dos clientes.
+              </S.Description>
+              <S.Button>VER PROJETO</S.Button>
+            </S.Wrapper>
+          </S.Info>
+        </S.GalleryItem>
+
+        <S.GalleryItem>
+          <S.Front>
+            <Image
+              src={'/img/fundointro.png'}
+              alt="imagem 01"
+              width={650}
+              height={600}
+            />
+          </S.Front>
+          <S.Info>
+            <S.Wrapper>
+              <S.Title>PROJETO 01</S.Title>
+              <S.Description>
+                Projeto de interiores desenvolvido para a WDG Engenharia,
+                resultando em ambientes sofisticados e funcionais. Com atenção
+                aos detalhes e uma abordagem personalizada, criamos espaços que
+                refletem a identidade e as necessidades dos clientes.
+              </S.Description>
+              <S.Button>VER PROJETO</S.Button>
+            </S.Wrapper>
+          </S.Info>
+        </S.GalleryItem>
+
+        <S.GalleryItem>
+          <S.Front>
+            <Image
+              src={'/img/fundointro.png'}
+              alt="imagem 01"
+              width={650}
+              height={600}
+            />
+          </S.Front>
+          <S.Info>
+            <S.Wrapper>
+              <S.Title>PROJETO 01</S.Title>
+              <S.Description>
+                Projeto de interiores desenvolvido para a WDG Engenharia,
+                resultando em ambientes sofisticados e funcionais. Com atenção
+                aos detalhes e uma abordagem personalizada, criamos espaços que
+                refletem a identidade e as necessidades dos clientes.
+              </S.Description>
+              <S.Button>VER PROJETO</S.Button>
+            </S.Wrapper>
+          </S.Info>
+        </S.GalleryItem>
+
+        <S.GalleryItem>
+          <S.Front>
+            <Image
+              src={'/img/fundointro.png'}
+              alt="imagem 01"
+              width={650}
+              height={600}
+            />
+          </S.Front>
+          <S.Info>
+            <S.Wrapper>
+              <S.Title>PROJETO 01</S.Title>
+              <S.Description>
+                Projeto de interiores desenvolvido para a WDG Engenharia,
+                resultando em ambientes sofisticados e funcionais. Com atenção
+                aos detalhes e uma abordagem personalizada, criamos espaços que
+                refletem a identidade e as necessidades dos clientes.
+              </S.Description>
+              <S.Button>VER PROJETO</S.Button>
+            </S.Wrapper>
+          </S.Info>
+        </S.GalleryItem>
+
+        <S.GalleryItem>
+          <S.Front>
+            <Image
+              src={'/img/fundointro.png'}
+              alt="imagem 01"
+              width={650}
+              height={600}
+            />
+          </S.Front>
+          <S.Info>
+            <S.Wrapper>
+              <S.Title>PROJETO 01</S.Title>
+              <S.Description>
+                Projeto de interiores desenvolvido para a WDG Engenharia,
+                resultando em ambientes sofisticados e funcionais. Com atenção
+                aos detalhes e uma abordagem personalizada, criamos espaços que
+                refletem a identidade e as necessidades dos clientes.
+              </S.Description>
+              <S.Button>VER PROJETO</S.Button>
+            </S.Wrapper>
+          </S.Info>
+        </S.GalleryItem>
+
+        <S.GalleryItem>
+          <S.Front>
+            <Image
+              src={'/img/fundointro.png'}
+              alt="imagem 01"
+              width={650}
+              height={600}
+            />
+          </S.Front>
+          <S.Info>
+            <S.Wrapper>
+              <S.Title>PROJETO 01</S.Title>
+              <S.Description>
+                Projeto de interiores desenvolvido para a WDG Engenharia,
+                resultando em ambientes sofisticados e funcionais. Com atenção
+                aos detalhes e uma abordagem personalizada, criamos espaços que
+                refletem a identidade e as necessidades dos clientes.
+              </S.Description>
+              <S.Button>VER PROJETO</S.Button>
+            </S.Wrapper>
+          </S.Info>
+        </S.GalleryItem>
+
+        <S.GalleryItem>
+          <S.Front>
+            <Image
+              src={'/img/fundointro.png'}
+              alt="imagem 01"
+              width={650}
+              height={600}
+            />
+          </S.Front>
+          <S.Info>
+            <S.Wrapper>
+              <S.Title>PROJETO 01</S.Title>
+              <S.Description>
+                Projeto de interiores desenvolvido para a WDG Engenharia,
+                resultando em ambientes sofisticados e funcionais. Com atenção
+                aos detalhes e uma abordagem personalizada, criamos espaços que
+                refletem a identidade e as necessidades dos clientes.
+              </S.Description>
+              <S.Button>VER PROJETO</S.Button>
+            </S.Wrapper>
+          </S.Info>
+        </S.GalleryItem>
+
+        <S.GalleryItem>
+          <S.Front>
+            <Image
+              src={'/img/fundointro.png'}
+              alt="imagem 01"
+              width={650}
+              height={600}
+            />
+          </S.Front>
+          <S.Info>
+            <S.Wrapper>
+              <S.Title>PROJETO 01</S.Title>
+              <S.Description>
+                Projeto de interiores desenvolvido para a WDG Engenharia,
+                resultando em ambientes sofisticados e funcionais. Com atenção
+                aos detalhes e uma abordagem personalizada, criamos espaços que
+                refletem a identidade e as necessidades dos clientes.
+              </S.Description>
+              <S.Button>VER PROJETO</S.Button>
+            </S.Wrapper>
+          </S.Info>
+        </S.GalleryItem>
+      </S.GalleryContainer>
+    </S.Container>
   )
 }
 

@@ -29,18 +29,27 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
   }
 
   ${({ theme }) => css`
     html {
       font-size: 62.5%;
+      background-color: #000000;
+
+      height: 100%;
     }
 
     body {
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   `}
+
+
 `
 
 export default GlobalStyles

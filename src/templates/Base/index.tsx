@@ -1,4 +1,3 @@
-import Footer from 'components/Footer'
 import Menu from 'components/Menu'
 import * as S from './styles'
 export type BaseTemplateProps = {
@@ -10,7 +9,6 @@ const Base = ({ children }: BaseTemplateProps) => {
     <S.Wrapper>
       <Menu />
       <S.Content>{children}</S.Content>
-      <Footer />
     </S.Wrapper>
   )
 }

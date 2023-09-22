@@ -1,14 +1,5 @@
-import GalleryTemplate, { GalleryTemplateProps } from 'templates/Gallery'
-import galleryMock from 'mocks/gallery/gallery'
+import GalleryTemplate from 'templates/Gallery'
 
-export default function Gallery(props: GalleryTemplateProps) {
-  return <GalleryTemplate {...props} />
-}
-
-export async function getStaticProps() {
-  return {
-    props: {
-      items: galleryMock
-    }
-  }
+export default function Gallery() {
+  return <GalleryTemplate />
 }

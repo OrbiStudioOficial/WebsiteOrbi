@@ -1,29 +1,40 @@
 import Link from 'next/link'
 import * as S from './styles'
-import { Container } from 'components/Container'
-import Button from 'components/Button'
+
+import { motion } from 'framer-motion'
 
 const Intro = () => {
   return (
-    <Container>
-      <S.SectionIntro>
-        <S.Background src="/img/background.png" />
-        <S.Content>
-          <S.Intro>
-            <img src="/img/logo.png"></img>
-            <S.Divider />
-            <S.Phrase2>
-              A Casa de Placas é uma empresa que realiza serviços especializados
-              em estampagem, distribuição e comercialização de placas
-              automotivas, sendo credenciada pelo DETRAN/PR e DETRAN/SC.
-            </S.Phrase2>
-            <Link href="/contato" passHref>
-              <Button size="medium">entrar em contato</Button>
-            </Link>
-          </S.Intro>
-        </S.Content>
-      </S.SectionIntro>
-    </Container>
+    <motion.div
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ ease: 'easeInOut', duration: 0.8 }}
+    >
+      <S.Container>
+        <S.Video>
+          <video
+            className="video"
+            src="img/videoteste.mp4"
+            autoPlay={true}
+            loop={true}
+            muted={true}
+          ></video>
+          <Link href={'/galeria'}>
+            <S.Phrase1>Ver todos os projetos ➟</S.Phrase1>
+          </Link>
+        </S.Video>
+        <S.SectionIntro>
+          <S.Phrase10 id="introSection">o que é a orbi?</S.Phrase10>
+          <S.Phrase2>
+            Somos especialistas em transformar sonhos arquitetônicos em
+            realidade virtual. Explore ambientes deslumbrantes e conceitos
+            inovadores com nossas renderizações 3D de alta qualidade. Prepare-se
+            para uma jornada além da imaginação, onde o futuro se encontra com a
+            arquitetura.
+          </S.Phrase2>
+        </S.SectionIntro>
+      </S.Container>
+    </motion.div>
   )
 }
 

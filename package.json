@@ -1,5 +1,5 @@
 {
-  "name": "react-avancado-boilerplate",
+  "name": "orbi-website",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -24,7 +24,9 @@
   "dependencies": {
     "@apollo/client": "^3.3.7",
     "axios": "^0.27.2",
+    "framer-motion": "^10.15.0",
     "graphql": "^15.4.0",
+    "gsap": "^3.12.2",
     "next": "12.2.2",
     "next-pwa": "^5.5.4",
     "next-seo": "^5.5.0",
