@@ -230,7 +230,7 @@ const Contact = () => {
                 <S.Wrapper>
                   <S.Box>
                     <Image
-                      src={'/img/fundointro.png'}
+                      src={'/img/fundointro.jpg'}
                       alt="imagem 01"
                       width={450}
                       height={300}
@@ -238,7 +238,7 @@ const Contact = () => {
                   </S.Box>
                   <S.Box>
                     <Image
-                      src={'/img/fundointro.png'}
+                      src={'/img/fundointro.jpg'}
                       alt="imagem 01"
                       width={450}
                       height={300}
@@ -246,7 +246,7 @@ const Contact = () => {
                   </S.Box>
                   <S.Box>
                     <Image
-                      src={'/img/fundointro.png'}
+                      src={'/img/fundointro.jpg'}
                       alt="imagem 01"
                       width={450}
                       height={300}
@@ -254,7 +254,7 @@ const Contact = () => {
                   </S.Box>
                   <S.Box>
                     <Image
-                      src={'/img/fundointro.png'}
+                      src={'/img/fundointro.jpg'}
                       alt="imagem 01"
                       width={450}
                       height={300}

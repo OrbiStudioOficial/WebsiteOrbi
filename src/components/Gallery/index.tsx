@@ -9,7 +9,7 @@ const Gallery = () => {
         <S.GalleryItem>
           <S.Front>
             <Image
-              src={'/img/fundointro.png'}
+              src={'/img/fundointro.jpg'}
               alt="imagem 01"
               width={650}
               height={600}
@@ -32,7 +32,7 @@ const Gallery = () => {
         <S.GalleryItem>
           <S.Front>
             <Image
-              src={'/img/fundointro.png'}
+              src={'/img/fundointro.jpg'}
               alt="imagem 01"
               width={650}
               height={600}
@@ -55,7 +55,7 @@ const Gallery = () => {
         <S.GalleryItem>
           <S.Front>
             <Image
-              src={'/img/fundointro.png'}
+              src={'/img/fundointro.jpg'}
               alt="imagem 01"
               width={650}
               height={600}
@@ -78,7 +78,7 @@ const Gallery = () => {
         <S.GalleryItem>
           <S.Front>
             <Image
-              src={'/img/fundointro.png'}
+              src={'/img/fundointro.jpg'}
               alt="imagem 01"
               width={650}
               height={600}
@@ -101,7 +101,7 @@ const Gallery = () => {
         <S.GalleryItem>
           <S.Front>
             <Image
-              src={'/img/fundointro.png'}
+              src={'/img/fundointro.jpg'}
               alt="imagem 01"
               width={650}
               height={600}
@@ -124,7 +124,7 @@ const Gallery = () => {
         <S.GalleryItem>
           <S.Front>
             <Image
-              src={'/img/fundointro.png'}
+              src={'/img/fundointro.jpg'}
               alt="imagem 01"
               width={650}
               height={600}
@@ -147,7 +147,7 @@ const Gallery = () => {
         <S.GalleryItem>
           <S.Front>
             <Image
-              src={'/img/fundointro.png'}
+              src={'/img/fundointro.jpg'}
               alt="imagem 01"
               width={650}
               height={600}
@@ -170,7 +170,7 @@ const Gallery = () => {
         <S.GalleryItem>
           <S.Front>
             <Image
-              src={'/img/fundointro.png'}
+              src={'/img/fundointro.jpg'}
               alt="imagem 01"
               width={650}
               height={600}
