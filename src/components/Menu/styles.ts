@@ -10,7 +10,7 @@ export const Fixed = styled.div<ButtonProps>`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 350px));
   align-items: center;
-  /* backdrop-filter: blur(4px); */
+  backdrop-filter: blur(4px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 100vw;
   margin-top: -2rem;
@@ -110,14 +110,13 @@ export const Info = styled.div`
 
   ${media.lessThan('large')`
   margin-left: 7.5rem;
-
+  width: 100%;
     `}
 `
 
 export const TitleMenu = styled.h2`
   ${({ theme }) => css`
     color: ${theme.colors.white};
-
     ${media.lessThan('large')`
   font-size: 2rem;
     `}

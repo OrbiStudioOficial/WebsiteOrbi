@@ -60,7 +60,12 @@ export const Phrase1 = styled.h2`
     color: ${theme.colors.white};
     text-transform: uppercase;
     width: 90%;
+    cursor: pointer;
 
+    &:hover {
+      color: #ed533e;
+      transition: 0.2s;
+    }
     ${media.greaterThan('medium')`
       width: 80%;
       text-shadow: none;
@@ -114,7 +119,7 @@ export const Video = styled.div`
 
   @media screen and (min-width: 2000px) {
     .video {
-      width: 140rem;
+      width: 110rem;
     }
   }
 
