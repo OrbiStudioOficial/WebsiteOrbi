@@ -221,6 +221,12 @@ export const Subtitle = styled.p<SubtitleProps>`
   margin: 0;
   font-size: 18px;
   text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    color: #ed533f;
+    transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  }
 `
 
 export const Description = styled.p<SubtitleProps>`

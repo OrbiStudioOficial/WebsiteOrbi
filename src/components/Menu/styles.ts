@@ -10,19 +10,17 @@ export const Fixed = styled.div<ButtonProps>`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 350px));
   align-items: center;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 100vw;
-  margin-top: -2rem;
-
+  height: 8rem;
+  margin-top: -3rem;
   ${media.lessThan('large')`
-  grid-template-columns: repeat(auto-fit, minmax(50px, 165px));
-
-    `}
-
+    grid-template-columns: repeat(auto-fit, minmax(50px, 165px));
+  `}
   ${media.lessThan('medium')`
-  margin-top: 1rem;
-    `}
+    margin-top: 1rem;
+  `}
 `
 
 export const Wrapper = styled.menu`
@@ -31,9 +29,8 @@ export const Wrapper = styled.menu`
     flex-direction: column;
     padding: ${theme.spacings.xsmall} 0;
     position: fixed;
+    top: 0;
     z-index: ${theme.layers.menu};
-    height: 100%;
-
     ${media.lessThan('medium')`
       margin-left: 0;
       padding: 0;
@@ -53,7 +50,7 @@ export const LogoWrapper = styled.div`
 
   ${media.lessThan('medium')`
     position: absolute;
-    top: -1rem;
+    top: -2rem;
     left: 3rem;
     margin-left: 0;
     height: auto;
@@ -73,6 +70,8 @@ export const LogoWrappertwo = styled.div`
   margin-left: 8.5rem;
   width: 22rem;
   height: 15rem;
+  margin-top: -3rem;
+
   ${media.lessThan('medium')`
     position: absolute;
     top: -1rem;
@@ -80,6 +79,7 @@ export const LogoWrappertwo = styled.div`
     margin-left: 0;
     height: auto;
     display: none;
+
   `}
 
   ${media.lessThan('large')`
@@ -92,7 +92,7 @@ export const IconWrapper = styled.div`
     color: ${theme.colors.white};
     position: absolute;
     right: 4rem;
-    top: 4rem;
+    top: 3rem;
     cursor: pointer;
     width: 2.4rem;
     height: 2.4rem;
@@ -106,6 +106,8 @@ export const IconWrapper = styled.div`
 export const Info = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: -3rem;
+
   ${media.lessThan('medium')`
     display: none;
   `}
@@ -140,6 +142,7 @@ export const MenuGroup = styled.ul`
   flex-grow: 1;
   justify-content: left;
   align-items: left;
+  margin-top: -3rem;
 
   ${media.lessThan('medium')`
   display: none;
@@ -230,8 +233,8 @@ export const MenuFull = styled.nav<MenuFullProps>`
 
     .bnt-close {
       position: absolute;
-      top: 3%;
-      right: 6%;
+      top: 1.5%;
+      right: 3%;
     }
     > svg {
       position: absolute;

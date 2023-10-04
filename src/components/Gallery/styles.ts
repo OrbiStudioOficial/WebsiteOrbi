@@ -5,7 +5,7 @@ export const Container = styled.section`
   height: 100%;
 `
 export const GalleryContainer = styled.div`
-  margin-top: 32rem;
+  margin-top: 10rem;
   gap: 2rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -100,6 +100,7 @@ export const Button = styled.button`
   height: 25px;
   flex-shrink: 0;
   background: #f2f2f2;
+  cursor: pointer;
 
   @media screen and (max-width: 768px) {
     font-size: 10px;
