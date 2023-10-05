@@ -233,31 +233,35 @@ const Contact = () => {
                       src={'/img/fundointro.jpg'}
                       alt="imagem 01"
                       width={450}
-                      height={300}
+                      height={250}
+                      objectFit="cover"
                     />
                   </S.Box>
                   <S.Box>
                     <Image
-                      src={'/img/fundointro.jpg'}
+                      src={'/img/casasouza.jpg'}
                       alt="imagem 01"
                       width={450}
-                      height={300}
+                      height={250}
+                      objectFit="cover"
                     />
                   </S.Box>
                   <S.Box>
                     <Image
-                      src={'/img/fundointro.jpg'}
+                      src={'/img/coatingline.jpg'}
                       alt="imagem 01"
                       width={450}
-                      height={300}
+                      height={250}
+                      objectFit="cover"
                     />
                   </S.Box>
                   <S.Box>
                     <Image
-                      src={'/img/fundointro.jpg'}
+                      src={'/img/cafealoha.jpg'}
                       alt="imagem 01"
                       width={450}
-                      height={300}
+                      height={250}
+                      objectFit="cover"
                     />
                   </S.Box>
                 </S.Wrapper>

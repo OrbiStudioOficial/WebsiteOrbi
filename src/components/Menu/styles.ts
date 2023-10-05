@@ -19,7 +19,7 @@ export const Fixed = styled.div<ButtonProps>`
     grid-template-columns: repeat(auto-fit, minmax(50px, 165px));
   `}
   ${media.lessThan('medium')`
-    margin-top: 1rem;
+    margin-top: 0rem;
   `}
 `
 

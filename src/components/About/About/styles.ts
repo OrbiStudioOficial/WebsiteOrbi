@@ -109,7 +109,7 @@ export const Columntwo = styled.div`
 `
 export const Rows = styled.div`
   width: 80%;
-  height: 72rem;
+  height: 62rem;
   margin-left: 20%;
   overflow-y: scroll;
 
@@ -243,6 +243,5 @@ export const Box = styled.div`
   ${media.lessThan('medium')`
   grid-template-columns: repeat(1, 1fr);
   margin: 0 auto;
-
   `}
 `
