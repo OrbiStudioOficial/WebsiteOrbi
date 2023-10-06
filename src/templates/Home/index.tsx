@@ -7,6 +7,8 @@ import Contact from 'components/Home/Contact'
 
 import { NextSeo } from 'next-seo'
 
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
+
 import { useEffect, useState } from 'react'
 
 import Loading from 'components/Loading'
@@ -66,6 +68,19 @@ const Home = () => {
                 ],
                 site_name: 'Orbi'
               }}
+            />
+            <FloatingWhatsApp
+              phoneNumber="556692152256"
+              accountName="Orbi Studio"
+              chatMessage="Precisa realizar um orçamento?"
+              statusMessage="BE AN ASTRONAUT"
+              placeholder="Olá, preciso realizar um orçamento!"
+              avatar="/img/ORBI-512.png"
+              allowEsc
+              allowClickAway
+              notification={true}
+              notificationSound={true}
+              notificationSoundSrc="/img/soundorbi.mp3"
             />
             <Intro />
             <About />
