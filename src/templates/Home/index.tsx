@@ -69,6 +69,7 @@ const Home = () => {
                 site_name: 'Orbi'
               }}
             />
+
             <FloatingWhatsApp
               phoneNumber="556692152256"
               accountName="Orbi Studio"
@@ -82,6 +83,7 @@ const Home = () => {
               notificationSound={true}
               notificationSoundSrc="/img/soundorbi.mp3"
             />
+
             <Intro />
             <About />
             <Services />

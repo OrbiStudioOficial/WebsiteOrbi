@@ -208,7 +208,15 @@ export const Description = styled.p`
   width: 90%;
   `}
 `
+export const Cta = styled.a`
+  z-index: 999;
+  text-decoration: none;
+  color: #000000;
 
+  &:hover {
+    color: #ffffff;
+  }
+`
 export const Button = styled.button`
   max-width: 204.975px;
   height: 37px;

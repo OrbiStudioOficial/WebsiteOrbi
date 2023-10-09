@@ -1,5 +1,8 @@
 import * as S from './styles'
 
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+
 import React, { useState } from 'react'
 
 const projects: IServices[] = [
@@ -150,6 +153,20 @@ const getCategories = (projects: IServices[]): string[] => {
 
 // eslint-disable-next-line no-empty-pattern
 const Services = ({}: Props) => {
+  const [ref, inView] = useInView({
+    threshold: 0.5
+  })
+
+  const animationVariants = {
+    hidden: { x: -100, opacity: 0 },
+    visible: { x: 0, opacity: 1 }
+  }
+
+  const animationVariantstwo = {
+    hidden: { x: 100, opacity: 0 },
+    visible: { x: 0, opacity: 1 }
+  }
+
   const projects = useProjects()
 
   const categories = getCategories(projects)
@@ -195,82 +212,107 @@ const Services = ({}: Props) => {
         <S.SectionAbout>
           <S.Content>
             <S.Column>
-              <S.Title id="servicesSection"></S.Title>
-              <S.Phrase10>Sobre</S.Phrase10>
-              <S.Phrase1>
-                <strong>
-                  Nossos serviços são divididos em três etapas essenciais:
-                </strong>
-                <br />
-                <br />
-                Criação, Desenvolvimento e Divulgação. Começamos com a fase de
-                criação, na qual concebemos ideias e o conceito central do
-                projeto.
-                <br />
-                <br />
-                Em seguida, na fase de desenvolvimento, transformamos essas
-                ideias em realidade, utilizando tecnologia de ponta.
-                <br />
-                <br />
-                Por fim, na etapa de divulgação, garantimos que o projeto
-                alcance seu público-alvo de forma estratégica, maximizando seu
-                sucesso. Nossa abordagem completa e integrada garante resultados
-                excepcionais para cada projeto.
-              </S.Phrase1>
+              <motion.div
+                ref={ref}
+                initial="hidden"
+                animate={inView ? 'visible' : 'hidden'}
+                variants={animationVariants}
+                transition={{ duration: 0.7, ease: 'easeOut' }}
+              >
+                <S.Title id="servicesSection"></S.Title>
+                <S.Phrase10>Sobre</S.Phrase10>
+                <S.Phrase1>
+                  <strong>
+                    Nossos serviços são divididos em três etapas essenciais:
+                  </strong>
+                  <br />
+                  <br />
+                  Criação, Desenvolvimento e Divulgação. Começamos com a fase de
+                  criação, na qual concebemos ideias e o conceito central do
+                  projeto.
+                  <br />
+                  <br />
+                  Em seguida, na fase de desenvolvimento, transformamos essas
+                  ideias em realidade, utilizando tecnologia de ponta.
+                  <br />
+                  <br />
+                  Por fim, na etapa de divulgação, garantimos que o projeto
+                  alcance seu público-alvo de forma estratégica, maximizando seu
+                  sucesso. Nossa abordagem completa e integrada garante
+                  resultados excepcionais para cada projeto.
+                </S.Phrase1>
+              </motion.div>
             </S.Column>
             <S.Columntwo>
-              {categories.map((cat) => {
-                const isActive = selectCategory === cat
-                return (
-                  <S.Button
-                    key={cat}
-                    onClick={() => handleSelectedCategory(cat)}
-                    selected={isActive && selectCategory === cat}
-                  >
-                    {cat}
-                  </S.Button>
-                )
-              })}
-              {filteredCategories.map((project) => (
-                <S.Info key={project.field}>
-                  <S.Center>
+              <motion.div
+                ref={ref}
+                initial="hidden"
+                animate={inView ? 'visible' : 'hidden'}
+                variants={animationVariantstwo}
+                transition={{ duration: 0.7, ease: 'easeOut' }}
+              >
+                {categories.map((cat) => {
+                  const isActive = selectCategory === cat
+                  return (
+                    <S.Button
+                      key={cat}
+                      onClick={() => handleSelectedCategory(cat)}
+                      selected={isActive && selectCategory === cat}
+                    >
+                      {cat}
+                    </S.Button>
+                  )
+                })}
+                {filteredCategories.map((project) => (
+                  <S.Info key={project.field}>
+                    <S.Center>
+                      {project.subtitles.map((sub, index) => {
+                        const isSelected = selectedSubtitle === sub.subtitle
+                        return (
+                          <>
+                            <S.SubtitleAlign key={index}>
+                              <S.Subtitle
+                                onClick={() =>
+                                  handleSelectedSubtitle(sub.subtitle)
+                                }
+                                selected={isSelected}
+                              >
+                                {sub.subtitle}
+                              </S.Subtitle>
+                            </S.SubtitleAlign>
+                          </>
+                        )
+                      })}
+                    </S.Center>
                     {project.subtitles.map((sub, index) => {
                       const isSelected = selectedSubtitle === sub.subtitle
                       return (
                         <>
-                          <S.SubtitleAlign key={index}>
-                            <S.Subtitle
-                              onClick={() =>
-                                handleSelectedSubtitle(sub.subtitle)
-                              }
-                              selected={isSelected}
-                            >
-                              {sub.subtitle}
-                            </S.Subtitle>
-                          </S.SubtitleAlign>
+                          <div>
+                            <S.InfoAling key={index}>
+                              <motion.div
+                                initial="hidden"
+                                animate={isSelected ? 'visible' : 'hidden'}
+                                variants={animationVariants}
+                                transition={{ duration: 0.3 }}
+                              >
+                                {isSelected && (
+                                  <div>
+                                    <S.TitleFilter>{sub.title}</S.TitleFilter>
+                                    <S.Description>
+                                      {sub.description}
+                                    </S.Description>
+                                  </div>
+                                )}
+                              </motion.div>
+                            </S.InfoAling>
+                          </div>
                         </>
                       )
                     })}
-                  </S.Center>
-                  {project.subtitles.map((sub, index) => {
-                    const isSelected = selectedSubtitle === sub.subtitle
-                    return (
-                      <>
-                        <div>
-                          <S.InfoAling key={index}>
-                            {isSelected && (
-                              <div>
-                                <S.TitleFilter>{sub.title}</S.TitleFilter>
-                                <S.Description>{sub.description}</S.Description>
-                              </div>
-                            )}
-                          </S.InfoAling>
-                        </div>
-                      </>
-                    )
-                  })}
-                </S.Info>
-              ))}
+                  </S.Info>
+                ))}
+              </motion.div>
             </S.Columntwo>
           </S.Content>
         </S.SectionAbout>

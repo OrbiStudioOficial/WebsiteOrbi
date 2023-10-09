@@ -2,6 +2,7 @@ import * as S from './styles'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import Image from 'next/image'
+
 import { useLayoutEffect, useRef } from 'react'
 
 import AboutMobile from '../AboutMobile'

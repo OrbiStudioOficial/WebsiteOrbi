@@ -11,7 +11,20 @@ const Intro = () => {
       transition={{ ease: 'easeInOut', duration: 0.8 }}
     >
       <S.Container>
-        <S.Video>
+        <S.GridContainer>
+          <S.SectionIntro>
+            <S.Phrase10 id="introSection">o que é a orbi?</S.Phrase10>
+            <S.Phrase2>
+              Somos especialistas em transformar sonhos arquitetônicos em
+              realidade virtual. Explore ambientes deslumbrantes e conceitos
+              inovadores com nossas renderizações 3D de alta qualidade.
+              Prepare-se para uma jornada além da imaginação, onde o futuro se
+              encontra com a arquitetura.
+            </S.Phrase2>
+            <Link href={'/galeria'}>
+              <S.Phrase1>Visualizar galeria ➟</S.Phrase1>
+            </Link>
+          </S.SectionIntro>
           <video
             className="video"
             src="img/videoteste.mp4"
@@ -19,20 +32,7 @@ const Intro = () => {
             loop={true}
             muted={true}
           ></video>
-          <Link href={'/galeria'}>
-            <S.Phrase1>Ver todos os projetos ➟</S.Phrase1>
-          </Link>
-        </S.Video>
-        <S.SectionIntro>
-          <S.Phrase10 id="introSection">o que é a orbi?</S.Phrase10>
-          <S.Phrase2>
-            Somos especialistas em transformar sonhos arquitetônicos em
-            realidade virtual. Explore ambientes deslumbrantes e conceitos
-            inovadores com nossas renderizações 3D de alta qualidade. Prepare-se
-            para uma jornada além da imaginação, onde o futuro se encontra com a
-            arquitetura.
-          </S.Phrase2>
-        </S.SectionIntro>
+        </S.GridContainer>
       </S.Container>
     </motion.div>
   )

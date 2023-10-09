@@ -104,7 +104,8 @@ export const Column = styled.div`
 export const Columntwo = styled.div`
   width: 60%;
   height: 75%;
-  overflow-y: scroll;
+  /* overflow-y: scroll;
+  overflow-x: hidden;
 
   &::-webkit-scrollbar {
     width: 5px;
@@ -124,5 +125,5 @@ export const Columntwo = styled.div`
   ${media.lessThan('large')`
     width: 85%;
 
-  `}
+  `} */
 `

@@ -453,3 +453,11 @@ export const StyledMenuLink = styled.a<{ active: boolean }>`
   padding-left: 1.2rem;
     `}
 `
+
+export const SVG = styled.div`
+  overflow: visible;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+`

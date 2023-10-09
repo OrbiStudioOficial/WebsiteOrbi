@@ -2,24 +2,46 @@ import * as S from './styles'
 
 import Dropdown from 'components/Dropdown'
 
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+
 const Services = () => {
+  const [ref, inView] = useInView({
+    threshold: 0.1
+  })
+
+  const animationVariants = {
+    hidden: { x: -100, opacity: 0 },
+    visible: { x: 0, opacity: 1 }
+  }
+
   return (
     <>
       <S.Container>
         <S.Info>
           <S.Center>
-            <S.Phrase1>Entenda como a orbi pode ajudar a sua empresa</S.Phrase1>
-            <S.Phrase2>
-              Imagine poder visualizar projetos arquitetônicos em detalhes
-              impressionantes antes mesmo de colocá-los em prática. <br />
-              <br />
-              Com nossa experiência em renderização 3D, podemos criar
-              visualizações realistas e envolventes que permitem que você
-              explore e apresente suas ideias de maneira convincente. <br />
-              <br />
-              Seja um projeto residencial, comercial ou industrial, estamos aqui
-              para ajudar a dar vida à sua visão.
-            </S.Phrase2>
+            <motion.div
+              ref={ref}
+              initial="hidden"
+              animate={inView ? 'visible' : 'hidden'}
+              variants={animationVariants}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
+            >
+              <S.Phrase1>
+                Entenda como a orbi pode ajudar a sua empresa
+              </S.Phrase1>
+              <S.Phrase2>
+                Imagine poder visualizar projetos arquitetônicos em detalhes
+                impressionantes antes mesmo de colocá-los em prática. <br />
+                <br />
+                Com nossa experiência em renderização 3D, podemos criar
+                visualizações realistas e envolventes que permitem que você
+                explore e apresente suas ideias de maneira convincente. <br />
+                <br />
+                Seja um projeto residencial, comercial ou industrial, estamos
+                aqui para ajudar a dar vida à sua visão.
+              </S.Phrase2>
+            </motion.div>
           </S.Center>
           <Dropdown />
           <S.Mobile>

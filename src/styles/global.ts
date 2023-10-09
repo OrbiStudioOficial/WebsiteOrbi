@@ -33,6 +33,15 @@ const GlobalStyles = createGlobalStyle`
 
   }
 
+  .item {
+  width: 56%;
+  overflow: visible;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
   ${({ theme }) => css`
     html {
       font-size: 62.5%;

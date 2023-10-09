@@ -1,221 +1,100 @@
 import * as S from './styles'
 
 import Image from 'next/image'
-import Link from 'next/link'
+
+import { motion } from 'framer-motion'
 
 const Gallery = () => {
+  const imageNames = [
+    'img01.jpg',
+    'img02.jpg',
+    'img04.jpg',
+    'img06.jpg',
+    'img07.jpg',
+    'img09.jpg',
+    'img11.jpg',
+    'img12.jpg',
+    'img14.jpg',
+    'img16.jpg',
+    'img17.jpg',
+    'img18.jpg',
+    'img19.jpg',
+    'img20.jpg',
+    'img21.jpg',
+    'img23.jpg',
+    'img24.jpg',
+    'img25.jpg',
+    'img26.jpg',
+    'img27.jpg',
+    'img28.jpg',
+    'img29.jpg',
+    'img30.jpg',
+    'img31.jpg',
+    'img32.jpg',
+    'img33.jpg',
+    'img34.jpg',
+    'img35.jpg',
+    'img36.jpg',
+    'img37.jpg',
+    'img38.jpg',
+    'img39.jpg',
+    'img40.jpg',
+    'img41.jpg',
+    'img42.jpg',
+    'img43.jpg',
+    'img44.jpg',
+    'img45.jpg',
+    'img46.jpg',
+    'img49.jpg',
+    'img50.jpg',
+    'img51.jpg',
+    'img53.jpg',
+    'img54.jpg',
+    'img55.jpg',
+    'img57.jpg',
+    'img62.jpg',
+    'img65.jpg',
+    'img67.jpg',
+    'img68.jpg',
+    'img69.jpg',
+    'img70.jpg',
+    'img71.jpg',
+    'img73.jpg',
+    'img74.jpg',
+    'img75.jpg',
+    'img76.jpg',
+    'img77.jpg',
+    'img78.jpg'
+  ]
+
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
+  }
+
   return (
     <S.Container className="slide-in">
       <S.GalleryContainer>
-        <S.GalleryItem>
-          <S.Front>
-            <Image
-              src={'/img/cafealoha.jpg'}
-              alt="imagem 01"
-              width={650}
-              height={600}
-              objectFit="cover"
-            />
-          </S.Front>
-          <S.Info>
-            <S.Wrapper>
-              <S.Title>CAFÉ ALOHA</S.Title>
-              <S.Description>
-                Projeto desenvolvido para a empresa CAFÉ ALOHA, no havaí.
-                Desenvolvimento 3D na criação de interiores da cafeteria.
-              </S.Description>
-              <Link href="https://www.behance.net/gallery/174536191/-Caf-Aloha-Havai-EUA">
-                <a target="_blank" rel="noopener noreferrer">
-                  <S.Button>VER PROJETO</S.Button>
-                </a>
-              </Link>
-            </S.Wrapper>
-          </S.Info>
-        </S.GalleryItem>
-
-        <S.GalleryItem>
-          <S.Front>
-            <Image
-              src={'/img/casasouza.jpg'}
-              alt="imagem 01"
-              width={650}
-              height={600}
-              objectFit="cover"
-            />
-          </S.Front>
-          <S.Info>
-            <S.Wrapper>
-              <S.Title>CASA SOUZA</S.Title>
-              <S.Description>
-                Projeto de interiores desenvolvido para a CASA SOUZA.
-              </S.Description>
-              <Link href="https://www.behance.net/gallery/173431621/-Casa-Souza-Sinop-MT">
-                <a target="_blank" rel="noopener noreferrer">
-                  <S.Button>VER PROJETO</S.Button>
-                </a>
-              </Link>
-            </S.Wrapper>
-          </S.Info>
-        </S.GalleryItem>
-
-        <S.GalleryItem>
-          <S.Front>
-            <Image
-              src={'/img/coatingline.jpg'}
-              alt="imagem 01"
-              width={650}
-              height={600}
-              objectFit="cover"
-            />
-          </S.Front>
-          <S.Info>
-            <S.Wrapper>
-              <S.Title>COATING LINE</S.Title>
-              <S.Description>
-                Projeto de interiores, resultando em ambientes sofisticados e
-                funcionais.
-              </S.Description>
-              <Link href="https://www.behance.net/gallery/163393923/-Render-produced-for-coating-line">
-                <a target="_blank" rel="noopener noreferrer">
-                  <S.Button>VER PROJETO</S.Button>
-                </a>
-              </Link>
-            </S.Wrapper>
-          </S.Info>
-        </S.GalleryItem>
-
-        <S.GalleryItem>
-          <S.Front>
-            <Image
-              src={'/img/fundointro.jpg'}
-              alt="imagem 01"
-              width={650}
-              height={600}
-              objectFit="cover"
-            />
-          </S.Front>
-          <S.Info>
-            <S.Wrapper>
-              <S.Title>WDG ENGENHARIA</S.Title>
-              <S.Description>
-                Projeto de interiores desenvolvido para a WDG Engenharia,
-                resultando em ambientes sofisticados e funcionais. Com atenção
-                aos detalhes e uma abordagem personalizada, criamos espaços que
-                refletem a identidade e as necessidades dos clientes.
-              </S.Description>
-              <Link href="https://www.behance.net/gallery/164333869/-Imagem-baseada-em-um-material-da-Hufton-Crow">
-                <a target="_blank" rel="noopener noreferrer">
-                  <S.Button>VER PROJETO</S.Button>
-                </a>
-              </Link>
-            </S.Wrapper>
-          </S.Info>
-        </S.GalleryItem>
-
-        <S.GalleryItem>
-          <S.Front>
-            <Image
-              src={'/img/Condominiodelofts.jpg'}
-              alt="imagem 01"
-              width={650}
-              height={600}
-              objectFit="cover"
-            />
-          </S.Front>
-          <S.Info>
-            <S.Wrapper>
-              <S.Title>CONDOMINIO DE LOFTS</S.Title>
-              <S.Description>
-                Projeto de interiores desenvolvido para a WDG Engenharia,
-                resultando em ambientes sofisticados e funcionais. Com atenção
-                aos detalhes e uma abordagem personalizada, criamos espaços que
-                refletem a identidade e as necessidades dos clientes.
-              </S.Description>
-              <Link href="https://www.behance.net/gallery/178279183/-Condominio-de-lofts-Uniao-da-Vitoria-PR">
-                <a target="_blank" rel="noopener noreferrer">
-                  <S.Button>VER PROJETO</S.Button>
-                </a>
-              </Link>
-            </S.Wrapper>
-          </S.Info>
-        </S.GalleryItem>
-
-        <S.GalleryItem>
-          <S.Front>
-            <Image
-              src={'/img/aware.jpg'}
-              alt="imagem 01"
-              width={650}
-              height={600}
-              objectFit="cover"
-            />
-          </S.Front>
-          <S.Info>
-            <S.Wrapper>
-              <S.Title>AWARE SOLUÇÕES</S.Title>
-              <S.Description>
-                Projeto de interiores desenvolvido para a empresa Aware
-                Soluções.
-              </S.Description>
-              <Link href="https://www.behance.net/gallery/159760431/-AWARE-SOLUCOES_Porto-Uniao-SC">
-                <a target="_blank" rel="noopener noreferrer">
-                  <S.Button>VER PROJETO</S.Button>
-                </a>
-              </Link>
-            </S.Wrapper>
-          </S.Info>
-        </S.GalleryItem>
-
-        <S.GalleryItem>
-          <S.Front>
-            <Image
-              src={'/img/bavna.jpg'}
-              alt="imagem 01"
-              width={650}
-              height={600}
-              objectFit="cover"
-            />
-          </S.Front>
-          <S.Info>
-            <S.Wrapper>
-              <S.Title>CLÍNICA BAVNA</S.Title>
-              <S.Description>
-                Projeto de interiores, resultando em ambientes sofisticados e
-                funcionais. Com atenção aos detalhes e uma abordagem
-                personalizada, criamos espaços que refletem a identidade e as
-                necessidades dos clientes.
-              </S.Description>
-              <Link href="https://www.behance.net/gallery/159887643/-CLINICA-BAVNA_ItajaiSC">
-                <a target="_blank" rel="noopener noreferrer">
-                  <S.Button>VER PROJETO</S.Button>
-                </a>
-              </Link>
-            </S.Wrapper>
-          </S.Info>
-        </S.GalleryItem>
-
-        <S.GalleryItem>
-          <S.Front>
-            <Image
-              src={'/img/casaRN.jpg'}
-              alt="imagem 01"
-              width={650}
-              height={600}
-              objectFit="cover"
-            />
-          </S.Front>
-          <S.Info>
-            <S.Wrapper>
-              <S.Title>CASA RS</S.Title>
-              <S.Description>Projeto de interiores.</S.Description>
-              <Link href="https://www.behance.net/gallery/173432911/-Casa-RS-Uniao-da-Vitoria-PR">
-                <a target="_blank" rel="noopener noreferrer">
-                  <S.Button>VER PROJETO</S.Button>
-                </a>
-              </Link>
-            </S.Wrapper>
-          </S.Info>
-        </S.GalleryItem>
+        {imageNames.map((imageName, index) => (
+          <motion.div
+            key={index}
+            initial="hidden"
+            animate="visible"
+            variants={imageVariants}
+          >
+            <S.GalleryItem key={index}>
+              <S.Front>
+                <Image
+                  src={`/api/imagem?fileName=${imageName}`}
+                  alt={`Imagem ${index + 1}`}
+                  width={1080}
+                  height={1350}
+                  objectFit="cover"
+                />
+              </S.Front>
+            </S.GalleryItem>
+          </motion.div>
+        ))}
       </S.GalleryContainer>
     </S.Container>
   )

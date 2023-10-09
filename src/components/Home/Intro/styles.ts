@@ -2,31 +2,36 @@ import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
 export const Container = styled.main`
-  height: 100%;
   width: 100%;
-  margin-top: 30rem;
-  display: flex;
-  flex-direction: row-reverse;
-  ${media.lessThan('huge')`
-  flex-direction: column-reverse;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 90rem;
+  padding: 0 12rem;
+
+  ${media.lessThan('huge')`
+  height: 100rem;
   `}
-  ${media.lessThan('medium')`
-  margin-top: 10rem;
+
+  ${media.lessThan('large')`
+  height: 110rem;
+
   `}
 `
-
-export const SectionIntro = styled.section`
-  display: flex;
-  flex-direction: column;
+export const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   align-items: center;
+  width: 100%;
 
-  ${media.greaterThan('huge')`
-  margin-left: 3rem;
-    `}
+  ${media.lessThan('huge')`
+    align-items: left;
+    grid-template-columns: 1fr;
+  `}
 `
+
+export const SectionIntro = styled.section``
 
 export const Phrase10 = styled.h2`
   ${({ theme }) => css`
@@ -37,10 +42,9 @@ export const Phrase10 = styled.h2`
     font-weight: ${theme.font.bold};
     color: ${theme.colors.white};
     text-transform: uppercase;
-    width: 85%;
 
     ${media.greaterThan('medium')`
-      width: 85%;
+
       text-shadow: none;
       color: ${theme.colors.white};
       margin-top: 3rem;
@@ -70,14 +74,11 @@ export const Phrase1 = styled.h2`
       width: 80%;
       text-shadow: none;
       color: ${theme.colors.white};
-      margin-top: 3rem;
-      margin-bottom: -2rem;
       line-height: ${theme.font.sizes.xxlarge};
       font-size: ${theme.font.sizes.large};
     `}
 
     ${media.lessThan('large')`
-    text-align: center;
     width: 100%;
   `}
   `}
@@ -85,7 +86,7 @@ export const Phrase1 = styled.h2`
 
 export const Phrase2 = styled.h4`
   ${({ theme }) => css`
-    width: 85%;
+    width: 60rem;
     margin-top: 3rem;
     margin-bottom: 5rem;
     font-size: ${theme.font.sizes.xlarge};
@@ -95,7 +96,7 @@ export const Phrase2 = styled.h4`
     color: ${theme.colors.white};
 
     ${media.greaterThan('medium')`
-      width: 85%;
+      width: 60rem;
       text-shadow: none;
       color: ${theme.colors.white};
       margin-top: 3rem;
@@ -103,39 +104,5 @@ export const Phrase2 = styled.h4`
       line-height: ${theme.font.sizes.xxlarge};
       font-size: ${theme.font.sizes.large};
     `}
-  `}
-`
-
-export const Video = styled.div`
-  position: relative;
-  top: -25rem;
-  padding-bottom: 5rem;
-
-  @media screen and (min-width: 1440px) {
-    .video {
-      width: 100rem;
-    }
-  }
-
-  @media screen and (min-width: 2000px) {
-    .video {
-      width: 110rem;
-    }
-  }
-
-  @media screen and (max-width: 1575px) {
-    .video {
-      width: 80rem;
-    }
-  }
-  @media screen and (max-width: 1440px) {
-    .video {
-      width: 100%;
-    }
-  }
-
-  ${media.lessThan('huge')`
-  top: 0rem;
-  left: 0rem;
   `}
 `
