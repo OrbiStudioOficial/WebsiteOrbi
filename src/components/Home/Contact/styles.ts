@@ -233,10 +233,7 @@ export const Button = styled.button`
   cursor: pointer;
   border: none;
   color: #000000;
-
-  ${media.lessThan('small')`
   padding: 2rem 1rem;
-  `}
 
   span {
     z-index: 1;

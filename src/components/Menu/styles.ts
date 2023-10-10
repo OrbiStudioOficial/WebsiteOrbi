@@ -455,9 +455,25 @@ export const StyledMenuLink = styled.a<{ active: boolean }>`
 `
 
 export const SVG = styled.div`
-  overflow: visible;
-  stroke: #fff;
-  stroke-width: 2;
-  stroke-linejoin: round;
-  stroke-linecap: round;
+  path {
+    fill: #e6503d;
+    stroke: #e6503d;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 5500;
+    stroke-dashoffset: 1000;
+    transition: stroke-dashoffset 1.8s ease-in-out, fill 1.8s ease-in-out;
+  }
+
+  &:hover {
+    path {
+      fill: transparent;
+      stroke-dashoffset: 11000;
+    }
+  }
+
+  .last-path {
+    fill: #2c1b63;
+    stroke: #2c1b63;
+  }
 `
