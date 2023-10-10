@@ -8,24 +8,37 @@ const Servicos = () => {
   return (
     <Base>
       <NextSeo
-        title="Orbi | servicos"
-        description="Produtos personalizados de acordo com a sua necessidade."
-        canonical="https://casadeplacas.com.br/produtos"
+        title="Orbi | Serviços"
+        description="Saiba mais sobre como a Orbi trabalha em diversas etapas de um projeto."
+        canonical="https://orbi.com.br/servicos"
         openGraph={{
-          url: 'https://casadeplacas.com.br/produtos',
-          title: 'Casa de Placas | Produtos',
+          url: 'https://orbi.com.br/servicos',
+          title: 'Orbi Studio | Serviços',
           description:
-            'Produtos personalizados de acordo com a sua necessidade.',
+            'Saiba mais sobre como a Orbi trabalha em diversas etapas de um projeto.',
           images: [
             {
-              url: 'https://casadeplacas.com.br/img/logoplacas.jpg',
+              url: 'https://orbi.com.br/img/ORBI-512.png',
               width: 1280,
               height: 720,
-              alt: 'Casa de Placas'
+              alt: 'Orbio Studio'
             }
           ],
-          site_name: 'Casa de Placas'
+          site_name: 'Orbio Studio'
         }}
+        additionalMetaTags={[
+          {
+            name: 'Orbi Studio',
+            content: 'Orbi Studio'
+          },
+          {
+            name: 'Orbi, Orbi Studio, Orbi 3D',
+            content:
+              'Orbi Studio, Orbi, Renderização 3D, Projetos Arquitetônicos'
+          }
+        ]}
+        noindex={false}
+        nofollow={false}
       />
       <>
         <S.Container>

@@ -8,23 +8,36 @@ const Contato = () => {
     <>
       <NextSeo
         title="Orbi | Contato"
-        description="Entre em contato para mais informações referente a render 3D."
-        canonical=""
+        description="Entre em contato para realizar um orçamento ou saber mais informações sobre a empresa Orbi"
+        canonical="https://orbi.com.br/contato"
         openGraph={{
-          url: '',
-          title: 'Orbi | Contato',
+          url: 'https://orbi.com.br/contato',
+          title: 'Orbi Studio | Contato',
           description:
-            'Entre em contato para mais informações referente a render 3D.',
+            'Entre em contato para realizar um orçamento ou saber mais informações sobre a empresa Orbi',
           images: [
             {
-              url: '',
+              url: 'https://orbi.com.br/img/ORBI-512.png',
               width: 1280,
               height: 720,
-              alt: 'Orbi'
+              alt: 'Orbio Studio'
             }
           ],
-          site_name: 'Orbi'
+          site_name: 'Orbio Studio'
         }}
+        additionalMetaTags={[
+          {
+            name: 'Orbi Studio',
+            content: 'Orbi Studio'
+          },
+          {
+            name: 'Orbi, Orbi Studio, Orbi 3D',
+            content:
+              'Orbi Studio, Orbi, Renderização 3D, Projetos Arquitetônicos'
+          }
+        ]}
+        noindex={false}
+        nofollow={false}
       />
       <Base>
         <S.Container>

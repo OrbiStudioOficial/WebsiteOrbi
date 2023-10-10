@@ -50,24 +50,37 @@ const Home = () => {
         <>
           <Base>
             <NextSeo
-              title="Orbi"
-              description="A Orbi realiza serviços no setor de modelagem 3D e renderização 3D."
-              canonical="https://orbi.com.br"
+              title="Orbi | Início"
+              description="Conheça sobre a empresa Orbi Studio, referência em renderizações 3D de ponta."
+              canonical="https://orbi.com.br/"
               openGraph={{
-                url: 'https://orbi.com.br',
-                title: 'Orbi',
+                url: 'https://orbi.com.br/',
+                title: 'Orbi Studio | Início',
                 description:
-                  'A Orbi realiza serviços no setor de modelagem 3D e renderização 3D.',
+                  'Conheça sobre a empresa Orbi Studio, referência em renderizações 3D de ponta.',
                 images: [
                   {
-                    url: 'https://orbi.com/img/logoorbi.png',
+                    url: 'https://orbi.com.br/img/ORBI-512.png',
                     width: 1280,
                     height: 720,
-                    alt: 'Orbi'
+                    alt: 'Orbio Studio'
                   }
                 ],
-                site_name: 'Orbi'
+                site_name: 'Orbio Studio'
               }}
+              additionalMetaTags={[
+                {
+                  name: 'Orbi Studio',
+                  content: 'Orbi Studio'
+                },
+                {
+                  name: 'Orbi, Orbi Studio, Orbi 3D',
+                  content:
+                    'Orbi Studio, Orbi, Renderização 3D, Projetos Arquitetônicos'
+                }
+              ]}
+              noindex={false}
+              nofollow={false}
             />
 
             <FloatingWhatsApp

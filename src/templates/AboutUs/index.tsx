@@ -9,23 +9,36 @@ const AboutUs = () => {
     <Base>
       <NextSeo
         title="Orbi | Sobre"
-        description="A Casa de Placas é uma empresa que realiza serviços especializados em estampagem, distribuição e comercialização de placas automotivas, sendo credenciada pelo DETRAN/PR."
-        canonical="https://casadeplacas.com.br/sobre"
+        description="A empresa Orbi é referência no setor de renderização 3D onde a dedicação é produzir imagens realistas de alto nível."
+        canonical="https://orbi.com.br/sobre"
         openGraph={{
-          url: 'https://casadeplacas.com.br/sobre',
-          title: 'Casa de Placas | Sobre',
+          url: 'https://orbi.com.br/sobre',
+          title: 'Orbi | Sobre',
           description:
-            'A Casa de Placas é uma empresa que realiza serviços especializados em estampagem, distribuição e comercialização de placas automotivas, sendo credenciada pelo DETRAN/PR.',
+            'A empresa Orbi é referência no setor de renderização 3D onde a dedicação é produzir imagens realistas de alto nível.',
           images: [
             {
-              url: 'https://casadeplacas.com.br/img/logoplacas.jpg',
+              url: 'https://orbi.com.br/img/ORBI-512.png',
               width: 1280,
               height: 720,
-              alt: 'Casa de Placas'
+              alt: 'Orbio Studio'
             }
           ],
-          site_name: 'Casa de Placas'
+          site_name: 'Orbio Studio'
         }}
+        additionalMetaTags={[
+          {
+            name: 'Orbi Studio',
+            content: 'Orbi Studio'
+          },
+          {
+            name: 'Orbi, Orbi Studio, Orbi 3D',
+            content:
+              'Orbi Studio, Orbi, Renderização 3D, Projetos Arquitetônicos'
+          }
+        ]}
+        noindex={false}
+        nofollow={false}
       />
       <S.SectionIntro>
         <About />
