@@ -3,6 +3,9 @@ import * as S from './styles'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 import Link from 'next/link'
 
 const Contact = () => {
@@ -30,7 +33,34 @@ const Contact = () => {
           </S.Phrase1>
           <S.Phrase2>
             Envie-nos um e-mail para iniciarmos uma conversa:
-            <p className="paragraph">contato@orbi3d.com</p>
+            <p
+              className="paragraph"
+              onClick={() => {
+                toast.success('Texto copiado com sucesso!', {
+                  position: 'bottom-center',
+                  autoClose: 1000,
+                  closeOnClick: true,
+                  progress: undefined,
+                  theme: 'light'
+                })
+                navigator.clipboard.writeText('contato@orbi3d.com')
+              }}
+            >
+              contato@orbi3d.com
+            </p>
+            <ToastContainer
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="light"
+            />
+            <ToastContainer />
           </S.Phrase2>
           <S.Phrase2>
             Se você precisar de orientação sobre quais informações devem ser

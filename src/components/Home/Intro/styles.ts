@@ -15,8 +15,14 @@ export const Container = styled.main`
 
   ${media.lessThan('large')`
   height: 110rem;
+  padding: 0 0rem;
+  padding-left: 0rem;
+
 
   `}
+  .video {
+    width: 100%;
+  }
 `
 export const GridContainer = styled.div`
   display: grid;
@@ -31,9 +37,13 @@ export const GridContainer = styled.div`
   `}
 `
 
-export const SectionIntro = styled.section``
+export const SectionIntro = styled.section`
+  ${media.lessThan('large')`
+padding-left: 7.5rem;
+  `}
+`
 
-export const Phrase10 = styled.h2`
+export const Phrase10 = styled.h1`
   ${({ theme }) => css`
     margin-top: 3rem;
     font-size: ${theme.font.sizes.xlarge};
@@ -63,8 +73,9 @@ export const Phrase1 = styled.h2`
     font-weight: ${theme.font.bold};
     color: ${theme.colors.white};
     text-transform: uppercase;
-    width: 90%;
+
     cursor: pointer;
+    display: inline;
 
     &:hover {
       color: #ed533e;

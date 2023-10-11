@@ -66,7 +66,6 @@ export const LogoWrappertwo = styled.div`
   margin: 0;
   flex-grow: 1;
   justify-content: flex-start;
-  cursor: pointer;
   margin-left: 8.5rem;
   width: 22rem;
   height: 15rem;
@@ -83,7 +82,7 @@ export const LogoWrappertwo = styled.div`
   `}
 
   ${media.lessThan('large')`
-  margin-left: 4rem;
+  margin-left: 3rem;
     `}
 `
 
@@ -113,7 +112,8 @@ export const Info = styled.div`
   `}
 
   ${media.lessThan('large')`
-  margin-left: 7.5rem;
+
+  margin-left: 8.5rem;
   width: 100%;
     `}
 `
@@ -454,11 +454,15 @@ export const StyledMenuLink = styled.a<{ active: boolean }>`
     `}
 `
 
-export const SVG = styled.div`
+export const SVG = styled.svg`
+  cursor: pointer;
+  height: 10rem;
+  margin-left: -1rem;
+
   path {
     fill: #e6503d;
     stroke: #e6503d;
-    stroke-width: 10;
+    stroke-width: 15;
     stroke-linecap: round;
     stroke-dasharray: 5500;
     stroke-dashoffset: 1000;

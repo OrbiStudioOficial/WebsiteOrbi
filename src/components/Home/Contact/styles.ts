@@ -93,6 +93,7 @@ export const Phrase2 = styled.h4`
     letter-spacing: 1px;
     transition: color 0.3s ease-in-out;
     padding-top: 3rem;
+    cursor: pointer;
     @media (max-width: 400px) {
       font-size: 14px;
     }
