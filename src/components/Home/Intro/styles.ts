@@ -1,13 +1,13 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-export const Container = styled.main`
+export const Container = styled.div`
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 90rem;
-  padding: 0 12rem;
+  /* padding: 0 12rem; */
 
   ${media.lessThan('huge')`
   height: 100rem;
@@ -22,7 +22,15 @@ export const Container = styled.main`
   `}
   .video {
     width: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
   }
+`
+
+export const VideoContainer = styled.div`
+  position: relative;
+  padding-bottom: 50%;
 `
 export const GridContainer = styled.div`
   display: grid;
@@ -39,7 +47,7 @@ export const GridContainer = styled.div`
 
 export const SectionIntro = styled.section`
   ${media.lessThan('large')`
-padding-left: 7.5rem;
+padding: 6rem;
   `}
 `
 
@@ -97,7 +105,6 @@ export const Phrase1 = styled.h2`
 
 export const Phrase2 = styled.h4`
   ${({ theme }) => css`
-    width: 60rem;
     margin-top: 3rem;
     margin-bottom: 5rem;
     font-size: ${theme.font.sizes.xlarge};

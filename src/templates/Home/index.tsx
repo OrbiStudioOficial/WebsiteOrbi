@@ -94,7 +94,6 @@ const Home = () => {
               allowClickAway
               notification={true}
               notificationSound={true}
-              notificationSoundSrc="/img/soundorbi.mp3"
             />
 
             <Intro />

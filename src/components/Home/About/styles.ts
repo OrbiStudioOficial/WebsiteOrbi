@@ -44,10 +44,6 @@ export const Phrase10 = styled.h2`
     color: ${theme.colors.white};
     text-transform: uppercase;
     width: 85%;
-
-    @media (min-width: 769px) {
-      display: none;
-    }
   `}
 `
 

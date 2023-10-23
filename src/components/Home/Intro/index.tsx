@@ -25,13 +25,16 @@ const Intro = () => {
               <S.Phrase1>Visualizar galeria ➟</S.Phrase1>
             </Link>
           </S.SectionIntro>
-          <video
-            className="video"
-            src="img/videoteste.mp4"
-            autoPlay={true}
-            loop={true}
-            muted={true}
-          ></video>
+
+          <S.VideoContainer>
+            <video
+              className="video"
+              src="img/videoteste.mp4"
+              autoPlay={true}
+              loop={true}
+              muted={true}
+            ></video>
+          </S.VideoContainer>
         </S.GridContainer>
       </S.Container>
     </motion.div>

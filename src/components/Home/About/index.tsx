@@ -7,7 +7,7 @@ import React from 'react'
 
 const About = () => {
   const [ref, inView] = useInView({
-    threshold: 0.5
+    threshold: 0.1
   })
 
   const animationVariants = {

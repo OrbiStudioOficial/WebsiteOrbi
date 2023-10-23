@@ -158,13 +158,13 @@ const Services = ({}: Props) => {
   })
 
   const animationVariants = {
-    hidden: { x: -100, opacity: 0 },
-    visible: { x: 0, opacity: 1 }
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 }
   }
 
   const animationVariantstwo = {
-    hidden: { x: 100, opacity: 0 },
-    visible: { x: 0, opacity: 1 }
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 }
   }
 
   const projects = useProjects()
