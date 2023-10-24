@@ -200,34 +200,38 @@ const ContactMobile = () => {
                 <S.Wrapper>
                   <S.Box>
                     <Image
-                      src={'/img/fundointro.png'}
+                      src={'/fotosgaleria/img01.jpg'}
                       alt="imagem 01"
-                      width={450}
-                      height={300}
+                      width={1080}
+                      height={1350}
+                      objectFit="cover"
                     />
                   </S.Box>
                   <S.Box>
                     <Image
-                      src={'/img/fundointro.png'}
+                      src={'/fotosgaleria/img02.jpg'}
                       alt="imagem 01"
-                      width={450}
-                      height={300}
+                      width={1080}
+                      height={1350}
+                      objectFit="cover"
                     />
                   </S.Box>
                   <S.Box>
                     <Image
-                      src={'/img/fundointro.png'}
+                      src={'/fotosgaleria/img23.jpg'}
                       alt="imagem 01"
-                      width={450}
-                      height={300}
+                      width={1080}
+                      height={1350}
+                      objectFit="cover"
                     />
                   </S.Box>
                   <S.Box>
                     <Image
-                      src={'/img/fundointro.png'}
+                      src={'/fotosgaleria/img04.jpg'}
                       alt="imagem 01"
-                      width={450}
-                      height={300}
+                      width={1080}
+                      height={1350}
+                      objectFit="cover"
                     />
                   </S.Box>
                 </S.Wrapper>

@@ -7,7 +7,6 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 90rem;
-  /* padding: 0 12rem; */
 
   ${media.lessThan('huge')`
   height: 100rem;
@@ -46,8 +45,18 @@ export const GridContainer = styled.div`
 `
 
 export const SectionIntro = styled.section`
+  ${media.greaterThan('huge')`
+  padding: 0rem;
+  margin-top: 0rem;
+  `}
+
+  ${media.greaterThan('large')`
+  padding: 0 12rem;
+  margin-top: 15rem;
+  `}
+
   ${media.lessThan('large')`
-padding: 6rem;
+  padding: 6rem;
   `}
 `
 
@@ -75,13 +84,11 @@ export const Phrase10 = styled.h1`
 export const Phrase1 = styled.h2`
   ${({ theme }) => css`
     margin-top: 3rem;
-    font-size: ${theme.font.sizes.xlarge};
+    font-size: ${theme.font.sizes.medium};
     line-height: ${theme.font.sizes.huge};
-    letter-spacing: 0.1rem;
     font-weight: ${theme.font.bold};
     color: ${theme.colors.white};
     text-transform: uppercase;
-
     cursor: pointer;
     display: inline;
 

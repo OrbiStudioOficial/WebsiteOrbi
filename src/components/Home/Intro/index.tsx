@@ -22,7 +22,7 @@ const Intro = () => {
               encontra com a arquitetura.
             </S.Phrase2>
             <Link href={'/galeria'}>
-              <S.Phrase1>Visualizar galeria ➟</S.Phrase1>
+              <S.Phrase1>Visualizar galeria</S.Phrase1>
             </Link>
           </S.SectionIntro>
 

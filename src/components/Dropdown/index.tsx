@@ -81,7 +81,7 @@ const Test = () => {
                     onClick={() => handleSubItemClick(1)}
                   >
                     <div className={activeItem === 1 ? 'active' : ''}>
-                      <S.SubheaderTitle>IDENTIDADE VISUAL</S.SubheaderTitle>
+                      <S.SubheaderTitle>Renders 3D</S.SubheaderTitle>
                     </div>
                     <S.SubArrow>
                       <img
@@ -109,7 +109,7 @@ const Test = () => {
                     onClick={() => handleSubItemClick(2)}
                   >
                     <div className={activeItem === 2 ? 'active' : ''}>
-                      <S.SubheaderTitle>NAMING</S.SubheaderTitle>
+                      <S.SubheaderTitle>Vídeos Institucionais</S.SubheaderTitle>
                     </div>
                     <S.SubArrow>
                       <img
@@ -137,7 +137,7 @@ const Test = () => {
                     onClick={() => handleSubItemClick(3)}
                   >
                     <div className={activeItem === 3 ? 'active' : ''}>
-                      <S.SubheaderTitle>CONCEITO ARTÍSTICO</S.SubheaderTitle>
+                      <S.SubheaderTitle>Animações 3D</S.SubheaderTitle>
                     </div>
                     <S.SubArrow>
                       <img
@@ -165,9 +165,7 @@ const Test = () => {
                     onClick={() => handleSubItemClick(4)}
                   >
                     <div className={activeItem === 4 ? 'active' : ''}>
-                      <S.SubheaderTitle>
-                        ESTUDOS ARQUITETÔNICOS
-                      </S.SubheaderTitle>
+                      <S.SubheaderTitle>Plantas Humanizadas</S.SubheaderTitle>
                     </div>
                     <S.SubArrow>
                       <img
@@ -178,62 +176,6 @@ const Test = () => {
                   </S.SubheaderTitleWrapper>
 
                   {activeSubItem === 4 && (
-                    <ul>
-                      <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec interdum tempus lacus. Vestibulum eu tellus
-                        bibendum, convallis risus quis, lobortis libero.
-                      </li>
-                    </ul>
-                  )}
-                </S.SubHeader>
-              </S.DropdownContent>
-
-              <S.DropdownContent>
-                <S.SubHeader>
-                  <S.SubheaderTitleWrapper
-                    onClick={() => handleSubItemClick(5)}
-                  >
-                    <div className={activeItem === 5 ? 'active' : ''}>
-                      <S.SubheaderTitle>ESTUDO DE FACHADA</S.SubheaderTitle>
-                    </div>
-                    <S.SubArrow>
-                      <img
-                        className={activeSubItem === 5 ? 'active' : ''}
-                        src="img/arrow.png"
-                      />
-                    </S.SubArrow>
-                  </S.SubheaderTitleWrapper>
-
-                  {activeSubItem === 5 && (
-                    <ul>
-                      <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec interdum tempus lacus. Vestibulum eu tellus
-                        bibendum, convallis risus quis, lobortis libero.
-                      </li>
-                    </ul>
-                  )}
-                </S.SubHeader>
-              </S.DropdownContent>
-
-              <S.DropdownContent>
-                <S.SubHeader>
-                  <S.SubheaderTitleWrapper
-                    onClick={() => handleSubItemClick(6)}
-                  >
-                    <div className={activeItem === 6 ? 'active' : ''}>
-                      <S.SubheaderTitle>IDENTIDADE VISUAL</S.SubheaderTitle>
-                    </div>
-                    <S.SubArrow>
-                      <img
-                        className={activeSubItem === 6 ? 'active' : ''}
-                        src="img/arrow.png"
-                      />
-                    </S.SubArrow>
-                  </S.SubheaderTitleWrapper>
-
-                  {activeSubItem === 6 && (
                     <ul>
                       <li>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -458,38 +400,10 @@ const Test = () => {
               <S.DropdownContent>
                 <S.SubHeader>
                   <S.SubheaderTitleWrapper
-                    onClick={() => handleSubItemClick(13)}
-                  >
-                    <div className={activeItem === 13 ? 'active' : ''}>
-                      <S.SubheaderTitle>IDENTIDADE VISUAL</S.SubheaderTitle>
-                    </div>
-                    <S.SubArrow>
-                      <img
-                        className={activeSubItem === 13 ? 'active' : ''}
-                        src="img/arrow.png"
-                      />
-                    </S.SubArrow>
-                  </S.SubheaderTitleWrapper>
-
-                  {activeSubItem === 13 && (
-                    <ul>
-                      <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec interdum tempus lacus. Vestibulum eu tellus
-                        bibendum, convallis risus quis, lobortis libero.
-                      </li>
-                    </ul>
-                  )}
-                </S.SubHeader>
-              </S.DropdownContent>
-
-              <S.DropdownContent>
-                <S.SubHeader>
-                  <S.SubheaderTitleWrapper
                     onClick={() => handleSubItemClick(14)}
                   >
                     <div className={activeItem === 14 ? 'active' : ''}>
-                      <S.SubheaderTitle>NAMING</S.SubheaderTitle>
+                      <S.SubheaderTitle>Websites</S.SubheaderTitle>
                     </div>
                     <S.SubArrow>
                       <img
@@ -517,7 +431,7 @@ const Test = () => {
                     onClick={() => handleSubItemClick(15)}
                   >
                     <div className={activeItem === 15 ? 'active' : ''}>
-                      <S.SubheaderTitle>CONCEITO ARTÍSTICO</S.SubheaderTitle>
+                      <S.SubheaderTitle>Gestão de Tráfego</S.SubheaderTitle>
                     </div>
                     <S.SubArrow>
                       <img

@@ -6,6 +6,7 @@ export const Container = styled.section`
 `
 export const GalleryContainer = styled.div`
   margin-top: 10rem;
+
   gap: 2rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -94,12 +95,20 @@ export const Description = styled.p`
     font-size: 10px;
   }
 `
+export const Center = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50%;
+`
+
 export const Button = styled.button`
   border: none;
-  width: 221px;
-  height: 25px;
+  width: 25%;
+  height: 3rem;
   flex-shrink: 0;
-  background: #f2f2f2;
+  border-radius: 3rem;
   cursor: pointer;
 
   @media screen and (max-width: 768px) {
@@ -116,4 +125,9 @@ export const Button = styled.button`
   line-height: normal;
   letter-spacing: 0.6px;
   text-transform: uppercase;
+
+  &:hover {
+    border: 2px solid #ee533f;
+    transition: 0.3s ease-in-out;
+  }
 `

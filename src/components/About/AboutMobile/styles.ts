@@ -252,7 +252,7 @@ export const BoxMobile = styled.div`
 
 export const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 5rem;
 
   ${media.lessThan('medium')`

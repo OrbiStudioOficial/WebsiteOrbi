@@ -224,8 +224,7 @@ export const Subtitle = styled.p<SubtitleProps>`
   cursor: pointer;
 
   &:hover {
-    color: #4a24aa;
-    transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    background-color: rgba(237, 83, 63, 0.3);
   }
 `
 

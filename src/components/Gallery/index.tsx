@@ -3,6 +3,8 @@ import * as S from './styles'
 import Image from 'next/image'
 
 import { motion } from 'framer-motion'
+import Footer from 'components/Footer'
+import { useState } from 'react'
 
 const Gallery = () => {
   const imageNames = [
@@ -72,10 +74,18 @@ const Gallery = () => {
     visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
   }
 
+  const PROJECTSLOADING = 8
+
+  const [visible, setVisible] = useState(PROJECTSLOADING)
+
+  const loadingMoreProjects = () => {
+    setVisible((prev) => prev + PROJECTSLOADING)
+  }
+
   return (
     <S.Container className="slide-in">
       <S.GalleryContainer>
-        {imageNames.map((imageName, index) => (
+        {imageNames.slice(0, visible).map((imageName, index) => (
           <motion.div
             key={index}
             initial="hidden"
@@ -96,6 +106,14 @@ const Gallery = () => {
           </motion.div>
         ))}
       </S.GalleryContainer>
+
+      <S.Center>
+        {visible < imageNames.length && (
+          <S.Button onClick={loadingMoreProjects}>Ver mais projetos</S.Button>
+        )}
+      </S.Center>
+
+      <Footer />
     </S.Container>
   )
 }

@@ -10,34 +10,28 @@ const projects: IServices[] = [
     field: 'Criação',
     subtitles: [
       {
-        title: 'Identidade visual',
-        subtitle: 'Identidade visual',
+        title: 'Renders 3D',
+        subtitle: 'Renders 3D',
         description:
           'Nossa equipe de design cria uma identidade visual única para seus projetos, incorporando cores, tipografia e elementos gráficos que refletem a essência de sua visão.'
       },
       {
-        title: 'Naming',
-        subtitle: 'Naming',
+        title: 'Vídeos Institucionais',
+        subtitle: 'Vídeos Institucionais',
         description:
           'Desenvolvemos nomes poderosos e memoráveis para seus projetos, produtos ou empresas, garantindo que cada nome conte uma história e atraia seu público-alvo.'
       },
       {
-        title: 'Conceito Artístico',
-        subtitle: 'Conceito Artístico',
+        title: 'Animações 3D',
+        subtitle: 'Animações 3D',
         description:
           'Criamos conceitos artísticos que representam visualmente a essência e a mensagem por trás do seu projeto.'
       },
       {
-        title: 'Estudos Arquitetônico',
-        subtitle: 'Estudos Arquitetônico',
+        title: 'Plantas Humanizadas',
+        subtitle: 'Plantas Humanizadas',
         description:
           'Realizamos estudos arquitetônicos detalhados para garantir que cada aspecto do seu projeto seja funcional e esteticamente atraente, ao mesmo tempo em que atende a todas as especificações técnicas.'
-      },
-      {
-        title: 'Estudos de fachada',
-        subtitle: 'Estudos de fachada',
-        description:
-          'Nossos estudos de fachada detalhados garantem que a parte externa do seu edifício seja projetada com precisão e estética, incorporando materiais e elementos que impressionam desde o primeiro olhar.'
       }
     ]
   },
@@ -98,12 +92,6 @@ const projects: IServices[] = [
     field: 'Divulgação',
     subtitles: [
       {
-        title: 'Social Media',
-        subtitle: 'Social Media',
-        description:
-          'Gerenciamos suas redes sociais, compartilhando conteúdo visualmente atraente para atrair e engajar seu público.'
-      },
-      {
         title: 'Websites',
         subtitle: 'Websites',
         description:
@@ -154,7 +142,7 @@ const getCategories = (projects: IServices[]): string[] => {
 // eslint-disable-next-line no-empty-pattern
 const Services = ({}: Props) => {
   const [ref, inView] = useInView({
-    threshold: 0.5
+    threshold: 0.2
   })
 
   const animationVariants = {

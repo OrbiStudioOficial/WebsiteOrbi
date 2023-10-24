@@ -49,7 +49,7 @@ const Services = () => {
               <S.TitleOrange>Criação</S.TitleOrange>
             </S.BoxMobileOrange>
             <S.BoxMobile>
-              <S.Title2>Identidade VISUAL</S.Title2>
+              <S.Title2>Renders 3D</S.Title2>
               <S.PhraseBottom>
                 Ao longo dos anos, entregamos resultados excepcionais,
                 colaborando com uma ampla variedade de clientes. Nosso portfólio
@@ -60,7 +60,7 @@ const Services = () => {
             </S.BoxMobile>
 
             <S.BoxMobile>
-              <S.Title2>Naming</S.Title2>
+              <S.Title2>Vídeos Institucionais</S.Title2>
               <S.PhraseBottom>
                 Ao longo dos anos, entregamos resultados excepcionais,
                 colaborando com uma ampla variedade de clientes. Nosso portfólio
@@ -71,7 +71,7 @@ const Services = () => {
             </S.BoxMobile>
 
             <S.BoxMobile>
-              <S.Title2>Conceito Artístico</S.Title2>
+              <S.Title2>Animações 3D</S.Title2>
               <S.PhraseBottom>
                 Ao longo dos anos, entregamos resultados excepcionais,
                 colaborando com uma ampla variedade de clientes. Nosso portfólio
@@ -82,29 +82,7 @@ const Services = () => {
             </S.BoxMobile>
 
             <S.BoxMobile>
-              <S.Title2>Estudos Arquitetônicos</S.Title2>
-              <S.PhraseBottom>
-                Ao longo dos anos, entregamos resultados excepcionais,
-                colaborando com uma ampla variedade de clientes. Nosso portfólio
-                abrangente demonstra nossa capacidade de transformar ideias em
-                realidade visual, fornecendo soluções personalizadas e
-                impactantes.
-              </S.PhraseBottom>
-            </S.BoxMobile>
-
-            <S.BoxMobile>
-              <S.Title2>Estudo de Fachada</S.Title2>
-              <S.PhraseBottom>
-                Ao longo dos anos, entregamos resultados excepcionais,
-                colaborando com uma ampla variedade de clientes. Nosso portfólio
-                abrangente demonstra nossa capacidade de transformar ideias em
-                realidade visual, fornecendo soluções personalizadas e
-                impactantes.
-              </S.PhraseBottom>
-            </S.BoxMobile>
-
-            <S.BoxMobile>
-              <S.Title2>Identidade Visual</S.Title2>
+              <S.Title2>Plantas Humanizadas</S.Title2>
               <S.PhraseBottom>
                 Ao longo dos anos, entregamos resultados excepcionais,
                 colaborando com uma ampla variedade de clientes. Nosso portfólio
@@ -209,17 +187,6 @@ const Services = () => {
             <S.BoxMobileOrange>
               <S.TitleOrange>Divulgação</S.TitleOrange>
             </S.BoxMobileOrange>
-
-            <S.BoxMobile>
-              <S.Title2>Social media</S.Title2>
-              <S.PhraseBottom>
-                Ao longo dos anos, entregamos resultados excepcionais,
-                colaborando com uma ampla variedade de clientes. Nosso portfólio
-                abrangente demonstra nossa capacidade de transformar ideias em
-                realidade visual, fornecendo soluções personalizadas e
-                impactantes.
-              </S.PhraseBottom>
-            </S.BoxMobile>
 
             <S.BoxMobile>
               <S.Title2>Websites</S.Title2>
