@@ -231,7 +231,7 @@ const Contact = () => {
                 <S.Wrapper>
                   <S.Box>
                     <Image
-                      src={'/img/fundointro.jpg'}
+                      src={'/fotosgaleria/img01.jpg'}
                       alt="imagem 01"
                       width={450}
                       height={250}
@@ -240,7 +240,7 @@ const Contact = () => {
                   </S.Box>
                   <S.Box>
                     <Image
-                      src={'/img/casasouza.jpg'}
+                      src={'/fotosgaleria/img23.jpg'}
                       alt="imagem 01"
                       width={450}
                       height={250}
@@ -249,7 +249,7 @@ const Contact = () => {
                   </S.Box>
                   <S.Box>
                     <Image
-                      src={'/img/coatingline.jpg'}
+                      src={'/fotosgaleria/img35.jpg'}
                       alt="imagem 01"
                       width={450}
                       height={250}
@@ -258,7 +258,7 @@ const Contact = () => {
                   </S.Box>
                   <S.Box>
                     <Image
-                      src={'/img/cafealoha.jpg'}
+                      src={'/fotosgaleria/img20.jpg'}
                       alt="imagem 01"
                       width={450}
                       height={250}
