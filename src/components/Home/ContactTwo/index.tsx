@@ -67,7 +67,7 @@ const Contact = () => {
             fornecidas, basta entrar em contato conosco via whatsapp:
           </S.Phrase2>
           <S.Button className="cta-02">
-            <S.Cta href="mailto:seuemail@example.com">
+            <S.Cta href="mailto:comercial@orbi3d.com">
               <span>ENTRAR EM CONTATO</span>
             </S.Cta>
           </S.Button>

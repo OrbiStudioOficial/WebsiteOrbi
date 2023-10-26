@@ -12,7 +12,7 @@ export const Footer = () => {
               Conte conosco para tornar o seu projeto realista!
             </S.Description>
           </div>
-          <Link href="mailto:seuemail@example.com">
+          <Link href="mailto:comercial@orbi3d.com">
             <S.Button>Orçamento</S.Button>
           </Link>
         </S.Wrapper>
