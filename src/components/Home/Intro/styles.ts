@@ -37,7 +37,6 @@ export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  align-items: center;
   width: 100%;
 
   ${media.lessThan('huge')`
