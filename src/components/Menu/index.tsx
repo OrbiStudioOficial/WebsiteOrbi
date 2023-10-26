@@ -179,9 +179,11 @@ const Menu = () => {
         </S.Info>
 
         <MediaMatch lessThan="medium">
-          <S.LogoWrapper>
-            <Logo color="white" size="normal" hideOnMobile />
-          </S.LogoWrapper>
+          <Link href="/">
+            <S.LogoWrapper>
+              <Logo color="white" size="normal" hideOnMobile />
+            </S.LogoWrapper>
+          </Link>
         </MediaMatch>
         <MediaMatch lessThan="medium">
           <S.IconWrapper onClick={() => setIsOpen(true)}>
