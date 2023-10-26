@@ -240,6 +240,15 @@ const Contact = () => {
                   </S.Box>
                   <S.Box>
                     <Image
+                      src={'/fotosgaleria/img02.jpg'}
+                      alt="imagem 01"
+                      width={450}
+                      height={250}
+                      objectFit="cover"
+                    />
+                  </S.Box>
+                  <S.Box>
+                    <Image
                       src={'/fotosgaleria/img23.jpg'}
                       alt="imagem 01"
                       width={450}
@@ -249,16 +258,7 @@ const Contact = () => {
                   </S.Box>
                   <S.Box>
                     <Image
-                      src={'/fotosgaleria/img35.jpg'}
-                      alt="imagem 01"
-                      width={450}
-                      height={250}
-                      objectFit="cover"
-                    />
-                  </S.Box>
-                  <S.Box>
-                    <Image
-                      src={'/fotosgaleria/img20.jpg'}
+                      src={'/fotosgaleria/img04.jpg'}
                       alt="imagem 01"
                       width={450}
                       height={250}
