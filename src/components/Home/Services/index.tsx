@@ -160,7 +160,9 @@ const Services = ({}: Props) => {
   const categories = getCategories(projects)
 
   const [selectCategory, setSelectCategory] = useState(categories[0])
-  const [selectedSubtitle, setSelectedSubtitle] = useState('')
+  const [selectedSubtitle, setSelectedSubtitle] = useState(
+    projects[0].subtitles[0].subtitle
+  )
 
   const handleSelectedCategory = (category: string) => {
     if (category === selectCategory) {
@@ -169,7 +171,11 @@ const Services = ({}: Props) => {
       return
     }
     setSelectCategory(category)
-    setSelectedSubtitle('')
+
+    const newCategory = projects.find((project) => project.field === category)
+    if (newCategory && newCategory.subtitles.length > 0) {
+      setSelectedSubtitle(newCategory.subtitles[0].subtitle)
+    }
   }
 
   if (selectCategory === '' && categories.length > 0) {
@@ -177,11 +183,7 @@ const Services = ({}: Props) => {
   }
 
   const handleSelectedSubtitle = (subtitle: string) => {
-    if (subtitle === selectedSubtitle) {
-      setSelectedSubtitle('')
-    } else {
-      setSelectedSubtitle(subtitle)
-    }
+    setSelectedSubtitle(subtitle)
   }
 
   const getFilteredCategories = (
