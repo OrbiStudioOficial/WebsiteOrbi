@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const Container = styled.section`
   width: 100%;
@@ -110,6 +111,9 @@ export const Button = styled.button`
   flex-shrink: 0;
   cursor: pointer;
 
+  ${media.lessThan('medium')`
+  min-width: 45%;
+  `}
   @media screen and (max-width: 768px) {
     font-size: 10px;
     height: 22px;
