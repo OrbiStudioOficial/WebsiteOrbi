@@ -23,7 +23,7 @@ export const Container = styled.div`
 export const Panel = styled.div`
   width: 100vw;
   height: 100vh;
-  background-image: url('img/backgroundabout.jpg');
+  background-image: url('img/background-06.png');
   background-repeat: no-repeat;
   background-size: cover;
 

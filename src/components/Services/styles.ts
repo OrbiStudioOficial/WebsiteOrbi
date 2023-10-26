@@ -4,7 +4,7 @@ import media from 'styled-media-query'
 export const Container = styled.main`
   height: 100vh;
   width: 100%;
-  background-image: url('img/backgroundservicestwo.jpg');
+  background-image: url('img/background-05.png');
   background-repeat: no-repeat;
   background-size: cover;
 
