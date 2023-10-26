@@ -6,8 +6,6 @@ import { useInView } from 'react-intersection-observer'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-import Link from 'next/link'
-
 const Contact = () => {
   const [ref, inView] = useInView({
     threshold: 0.5
@@ -71,42 +69,6 @@ const Contact = () => {
               <span>ENTRAR EM CONTATO</span>
             </S.Cta>
           </S.Button>
-          <S.Infos>
-            <div>
-              <S.Info>QUESTÕES GERAIS</S.Info>
-              <S.Description>
-                Se você tiver uma pergunta ou comentário, entre em contato.
-              </S.Description>
-            </div>
-
-            <div>
-              <S.Info>LINKS</S.Info>
-              <S.Ul>
-                <Link href={'/'}>
-                  <S.Li>HOME</S.Li>
-                </Link>
-                <Link href={'/sobre'}>
-                  <S.Li>SOBRE</S.Li>
-                </Link>
-                <Link href={'/servicos'}>
-                  <S.Li>SERVIÇOS</S.Li>
-                </Link>
-                <Link href={'/galeria'}>
-                  <S.Li>PROJETOS</S.Li>
-                </Link>
-                <Link href={'/contato'}>
-                  <S.Li>CONTATO</S.Li>
-                </Link>
-              </S.Ul>
-            </div>
-
-            <div>
-              <S.Info>SIGA-NOS</S.Info>
-              <S.Description>
-                Siga nosso trabalho pelo o Instagram e no Behance.
-              </S.Description>
-            </div>
-          </S.Infos>
         </motion.div>
       </S.SectionIntro>
     </S.Container>
