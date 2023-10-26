@@ -26,7 +26,6 @@ export const Description = styled.p`
 
 export const Button = styled.button`
   cursor: pointer;
-  border-radius: 4rem;
   border: 1px solid #fff;
   padding: 1rem 7rem;
   background-color: transparent;

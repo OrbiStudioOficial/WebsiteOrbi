@@ -108,7 +108,6 @@ export const Button = styled.button`
   width: 25%;
   height: 3rem;
   flex-shrink: 0;
-  border-radius: 3rem;
   cursor: pointer;
 
   @media screen and (max-width: 768px) {

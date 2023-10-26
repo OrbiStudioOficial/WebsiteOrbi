@@ -4,9 +4,26 @@ import media from 'styled-media-query'
 export const Container = styled.main`
   height: 100vh;
   width: 100%;
-  background-image: url('img/backgroundcontact.jpg');
+  background-image: url('img/background-03.jpg');
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .index {
+    z-index: 2;
+  }
 `
 
 export const SectionIntro = styled.section`

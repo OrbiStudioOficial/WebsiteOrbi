@@ -27,6 +27,7 @@ const Contact = () => {
           animate={inView ? 'visible' : 'hidden'}
           variants={animationVariants}
           transition={{ duration: 0.7, ease: 'easeOut' }}
+          className="index"
         >
           <S.Phrase1 id="contactSection">
             QUAL SERÁ O NOSSO PRÓXIMO PROJETO?

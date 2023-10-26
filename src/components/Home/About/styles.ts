@@ -4,9 +4,22 @@ import media from 'styled-media-query'
 export const Container = styled.main`
   height: 100vh;
   width: 100%;
-  background-image: url('img/fundointro.jpg');
+  background-image: url('img/background-01.jpg');
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 `
 
 export const SectionAbout = styled.section`
@@ -89,6 +102,7 @@ export const Column = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 12rem;
+  z-index: 2;
 
   ${media.lessThan('large')`
     padding-left: 0rem;
@@ -100,6 +114,8 @@ export const Column = styled.div`
 export const Columntwo = styled.div`
   width: 60%;
   height: 75%;
+  z-index: 2;
+
   overflow-y: scroll;
   overflow-x: hidden;
 

@@ -32,6 +32,8 @@ export const VideoContainer = styled.div`
   padding-bottom: 50%;
 `
 export const GridContainer = styled.div`
+  z-index: 2;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -81,35 +83,6 @@ export const Phrase10 = styled.h1`
     `}
   `}
 `
-export const Phrase1 = styled.h2`
-  ${({ theme }) => css`
-    margin-top: 3rem;
-    font-size: ${theme.font.sizes.medium};
-    line-height: ${theme.font.sizes.huge};
-    font-weight: ${theme.font.bold};
-    color: ${theme.colors.white};
-    text-transform: uppercase;
-    cursor: pointer;
-    display: inline;
-
-    &:hover {
-      color: #ed533e;
-      transition: 0.2s;
-    }
-    ${media.greaterThan('medium')`
-      width: 80%;
-      text-shadow: none;
-      color: ${theme.colors.white};
-      line-height: ${theme.font.sizes.xxlarge};
-      font-size: ${theme.font.sizes.large};
-    `}
-
-    ${media.lessThan('large')`
-    width: 100%;
-  `}
-  `}
-`
-
 export const Phrase2 = styled.h4`
   ${({ theme }) => css`
     margin-top: 3rem;
@@ -130,4 +103,82 @@ export const Phrase2 = styled.h4`
       font-size: ${theme.font.sizes.large};
     `}
   `}
+`
+export const Button = styled.button`
+  max-width: 204.975px;
+  height: 3rem;
+  font-family: Wix Madefor Display;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  color: #000000;
+  padding: 2rem 8rem;
+
+  span {
+    z-index: 1;
+    transition: all 0.3s ease-out;
+  }
+
+  &:after,
+  &:before {
+    width: 0%;
+    height: 0%;
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+  }
+
+  &:after,
+  &:before {
+    width: 0%;
+    height: 0%;
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+  }
+
+  &:after {
+    transition: all 0.5s ease;
+    background-color: #ed533f;
+  }
+
+  &:before {
+    transition: all 0.5s ease-out;
+    background: #4a25aa;
+  }
+
+  .cta-02 {
+    background-color: transparent;
+
+    &:after {
+      background: linear-gradient(90deg, #4a25aa 100%);
+    }
+  }
+
+  &:hover {
+    &.cta-02 {
+      color: white;
+    }
+    &:after,
+    &:before {
+      width: 300px;
+      height: 300px;
+      border-radius: 4px;
+    }
+    &:after {
+      transition: all 0.7s ease-in;
+    }
+
+    &:before {
+      transition: all 0.5s ease-in;
+    }
+  }
 `

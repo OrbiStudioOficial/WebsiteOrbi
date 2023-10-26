@@ -4,9 +4,22 @@ import media from 'styled-media-query'
 export const Container = styled.main`
   height: 100vh;
   width: 100%;
-  background-image: url('img/backgroundservices.jpg');
+  background-image: url('img/background-02.jpg');
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 
   ${media.lessThan('medium')`
   height: 120rem;
@@ -102,6 +115,7 @@ export const Content = styled.div`
 `
 
 export const Column = styled.div`
+  z-index: 2;
   display: flex;
   flex-direction: column;
   padding-left: 12rem;
@@ -112,6 +126,7 @@ export const Column = styled.div`
   `}
 `
 export const Columntwo = styled.div`
+  z-index: 2;
   width: 100rem;
 
   @media screen and (max-width: 1380px) {
