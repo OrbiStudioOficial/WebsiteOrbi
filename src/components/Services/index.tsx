@@ -51,44 +51,34 @@ const Services = () => {
             <S.BoxMobile>
               <S.Title2>Renders 3D</S.Title2>
               <S.PhraseBottom>
-                Ao longo dos anos, entregamos resultados excepcionais,
-                colaborando com uma ampla variedade de clientes. Nosso portfólio
-                abrangente demonstra nossa capacidade de transformar ideias em
-                realidade visual, fornecendo soluções personalizadas e
-                impactantes.
+                Modelagem 3D e produção de renders realistas para arquitetos e
+                empreendimentos imobiliários.
               </S.PhraseBottom>
             </S.BoxMobile>
 
             <S.BoxMobile>
               <S.Title2>Vídeos Institucionais</S.Title2>
               <S.PhraseBottom>
-                Ao longo dos anos, entregamos resultados excepcionais,
-                colaborando com uma ampla variedade de clientes. Nosso portfólio
-                abrangente demonstra nossa capacidade de transformar ideias em
-                realidade visual, fornecendo soluções personalizadas e
-                impactantes.
+                Produzimos vídeos institucionais de lançamento, mesclando 3D e
+                realidade. Com um roteiro elaborado por nós, esses vídeos ajudam
+                na imersão do cliente em seu projeto.
               </S.PhraseBottom>
             </S.BoxMobile>
 
             <S.BoxMobile>
               <S.Title2>Animações 3D</S.Title2>
               <S.PhraseBottom>
-                Ao longo dos anos, entregamos resultados excepcionais,
-                colaborando com uma ampla variedade de clientes. Nosso portfólio
-                abrangente demonstra nossa capacidade de transformar ideias em
-                realidade visual, fornecendo soluções personalizadas e
-                impactantes.
+                Animações totalmente em 3D, com ambientação, movimentos de
+                câmera e elementos humanizados.
               </S.PhraseBottom>
             </S.BoxMobile>
 
             <S.BoxMobile>
               <S.Title2>Plantas Humanizadas</S.Title2>
               <S.PhraseBottom>
-                Ao longo dos anos, entregamos resultados excepcionais,
-                colaborando com uma ampla variedade de clientes. Nosso portfólio
-                abrangente demonstra nossa capacidade de transformar ideias em
-                realidade visual, fornecendo soluções personalizadas e
-                impactantes.
+                Produzimos plantas 2D e 3D humanizadas, tornando seu material de
+                divulgação mais imersivo e convincente, proporcionando uma maior
+                profundidade aos olhos do cliente.
               </S.PhraseBottom>
             </S.BoxMobile>
 
@@ -97,90 +87,47 @@ const Services = () => {
             </S.BoxMobileOrange>
 
             <S.BoxMobile>
-              <S.Title2>Retratos 3d realistas</S.Title2>
+              <S.Title2>Identidade visual</S.Title2>
               <S.PhraseBottom>
-                Ao longo dos anos, entregamos resultados excepcionais,
-                colaborando com uma ampla variedade de clientes. Nosso portfólio
-                abrangente demonstra nossa capacidade de transformar ideias em
-                realidade visual, fornecendo soluções personalizadas e
-                impactantes.
+                Desenvolvemos a identidade visual única e impactante para a sua
+                empresa, transmitindo de forma visual a essência e valores que a
+                tornam singular no mercado.
               </S.PhraseBottom>
             </S.BoxMobile>
 
             <S.BoxMobile>
-              <S.Title2>Imagens</S.Title2>
+              <S.Title2>Naming</S.Title2>
               <S.PhraseBottom>
-                Ao longo dos anos, entregamos resultados excepcionais,
-                colaborando com uma ampla variedade de clientes. Nosso portfólio
-                abrangente demonstra nossa capacidade de transformar ideias em
-                realidade visual, fornecendo soluções personalizadas e
-                impactantes.
+                Desenvolvemos nomes para empreendimentos ou escritórios de
+                arquitetura, levando em consideração toda a engenharia da
+                escolha do nome e o design de sua logo.
               </S.PhraseBottom>
             </S.BoxMobile>
 
             <S.BoxMobile>
-              <S.Title2>Plantas</S.Title2>
+              <S.Title2>Conceito artístico</S.Title2>
               <S.PhraseBottom>
-                Ao longo dos anos, entregamos resultados excepcionais,
-                colaborando com uma ampla variedade de clientes. Nosso portfólio
-                abrangente demonstra nossa capacidade de transformar ideias em
-                realidade visual, fornecendo soluções personalizadas e
-                impactantes.
+                Produzimos estudos preliminares arquitetônicos e ideias
+                artísticas. Com uma equipe altamente qualificada de arquitetos,
+                conseguimos criar ideias para o seu negócio.
               </S.PhraseBottom>
             </S.BoxMobile>
 
             <S.BoxMobile>
-              <S.Title2>Implantação humanizada</S.Title2>
+              <S.Title2>Estudos arquitetônicos</S.Title2>
               <S.PhraseBottom>
-                Ao longo dos anos, entregamos resultados excepcionais,
-                colaborando com uma ampla variedade de clientes. Nosso portfólio
-                abrangente demonstra nossa capacidade de transformar ideias em
-                realidade visual, fornecendo soluções personalizadas e
-                impactantes.
+                Realizamos estudos arquitetônicos detalhados, explorando
+                conceitos inovadores e soluções criativas para moldar o ambiente
+                construído.
               </S.PhraseBottom>
             </S.BoxMobile>
 
             <S.BoxMobile>
-              <S.Title2>Imagens fachada</S.Title2>
+              <S.Title2>Estudo de fachada</S.Title2>
               <S.PhraseBottom>
-                Ao longo dos anos, entregamos resultados excepcionais,
-                colaborando com uma ampla variedade de clientes. Nosso portfólio
-                abrangente demonstra nossa capacidade de transformar ideias em
-                realidade visual, fornecendo soluções personalizadas e
-                impactantes.
-              </S.PhraseBottom>
-            </S.BoxMobile>
-
-            <S.BoxMobile>
-              <S.Title2>Foto inserção</S.Title2>
-              <S.PhraseBottom>
-                Ao longo dos anos, entregamos resultados excepcionais,
-                colaborando com uma ampla variedade de clientes. Nosso portfólio
-                abrangente demonstra nossa capacidade de transformar ideias em
-                realidade visual, fornecendo soluções personalizadas e
-                impactantes.
-              </S.PhraseBottom>
-            </S.BoxMobile>
-
-            <S.BoxMobile>
-              <S.Title2>Vídeo de lançamento</S.Title2>
-              <S.PhraseBottom>
-                Ao longo dos anos, entregamos resultados excepcionais,
-                colaborando com uma ampla variedade de clientes. Nosso portfólio
-                abrangente demonstra nossa capacidade de transformar ideias em
-                realidade visual, fornecendo soluções personalizadas e
-                impactantes.
-              </S.PhraseBottom>
-            </S.BoxMobile>
-
-            <S.BoxMobile>
-              <S.Title2>Vídeo animações 3d</S.Title2>
-              <S.PhraseBottom>
-                Ao longo dos anos, entregamos resultados excepcionais,
-                colaborando com uma ampla variedade de clientes. Nosso portfólio
-                abrangente demonstra nossa capacidade de transformar ideias em
-                realidade visual, fornecendo soluções personalizadas e
-                impactantes.
+                Com uma equipe de arquitetos qualificados, produzimos o design
+                arquitetônico da fachada. A fachada do empreendimento é
+                responsável pelas primeiras impressões do projeto.
               </S.PhraseBottom>
             </S.BoxMobile>
 
@@ -191,22 +138,11 @@ const Services = () => {
             <S.BoxMobile>
               <S.Title2>Websites</S.Title2>
               <S.PhraseBottom>
-                Ao longo dos anos, entregamos resultados excepcionais,
-                colaborando com uma ampla variedade de clientes. Nosso portfólio
-                abrangente demonstra nossa capacidade de transformar ideias em
-                realidade visual, fornecendo soluções personalizadas e
-                impactantes.
-              </S.PhraseBottom>
-            </S.BoxMobile>
-
-            <S.BoxMobile>
-              <S.Title2>Gestão de tráfego</S.Title2>
-              <S.PhraseBottom>
-                Ao longo dos anos, entregamos resultados excepcionais,
-                colaborando com uma ampla variedade de clientes. Nosso portfólio
-                abrangente demonstra nossa capacidade de transformar ideias em
-                realidade visual, fornecendo soluções personalizadas e
-                impactantes.
+                Produzimos páginas web para seu empreendimento e escritório.
+                Sites responsivos são necessários para trazer credibilidade ao
+                seu negócio. Além dos sites profissionais, também desenvolvemos
+                páginas de vendas e landing pages para a captação dos seus
+                leads.
               </S.PhraseBottom>
             </S.BoxMobile>
           </S.Mobile>

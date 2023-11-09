@@ -94,9 +94,8 @@ const Test = () => {
                   {activeSubItem === 1 && (
                     <ul>
                       <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec interdum tempus lacus. Vestibulum eu tellus
-                        bibendum, convallis risus quis, lobortis libero.
+                        Modelagem 3D e produção de renders realistas para
+                        arquitetos e empreendimentos imobiliários.
                       </li>
                     </ul>
                   )}
@@ -122,9 +121,10 @@ const Test = () => {
                   {activeSubItem === 2 && (
                     <ul>
                       <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec interdum tempus lacus. Vestibulum eu tellus
-                        bibendum, convallis risus quis, lobortis libero.
+                        Produzimos vídeos institucionais de lançamento,
+                        mesclando 3D e realidade. Com um roteiro elaborado por
+                        nós, esses vídeos ajudam na imersão do cliente em seu
+                        projeto.
                       </li>
                     </ul>
                   )}
@@ -150,9 +150,8 @@ const Test = () => {
                   {activeSubItem === 3 && (
                     <ul>
                       <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec interdum tempus lacus. Vestibulum eu tellus
-                        bibendum, convallis risus quis, lobortis libero.
+                        Animações totalmente em 3D, com ambientação, movimentos
+                        de câmera e elementos humanizados.
                       </li>
                     </ul>
                   )}
@@ -178,9 +177,10 @@ const Test = () => {
                   {activeSubItem === 4 && (
                     <ul>
                       <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec interdum tempus lacus. Vestibulum eu tellus
-                        bibendum, convallis risus quis, lobortis libero.
+                        Produzimos plantas 2D e 3D humanizadas, tornando seu
+                        material de divulgação mais imersivo e convincente,
+                        proporcionando uma maior profundidade aos olhos do
+                        cliente.
                       </li>
                     </ul>
                   )}
@@ -213,7 +213,7 @@ const Test = () => {
                     onClick={() => handleSubItemClick(7)}
                   >
                     <div className={activeItem === 7 ? 'active' : ''}>
-                      <S.SubheaderTitle>IDENTIDADE VISUAL</S.SubheaderTitle>
+                      <S.SubheaderTitle>Identidade visual</S.SubheaderTitle>
                     </div>
                     <S.SubArrow>
                       <img
@@ -226,9 +226,9 @@ const Test = () => {
                   {activeSubItem === 7 && (
                     <ul>
                       <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec interdum tempus lacus. Vestibulum eu tellus
-                        bibendum, convallis risus quis, lobortis libero.
+                        Desenvolvemos a identidade visual única e impactante
+                        para a sua empresa, transmitindo de forma visual a
+                        essência e valores que a tornam singular no mercado.
                       </li>
                     </ul>
                   )}
@@ -241,7 +241,7 @@ const Test = () => {
                     onClick={() => handleSubItemClick(8)}
                   >
                     <div className={activeItem === 8 ? 'active' : ''}>
-                      <S.SubheaderTitle>NAMING</S.SubheaderTitle>
+                      <S.SubheaderTitle>Naming</S.SubheaderTitle>
                     </div>
                     <S.SubArrow>
                       <img
@@ -254,9 +254,9 @@ const Test = () => {
                   {activeSubItem === 8 && (
                     <ul>
                       <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec interdum tempus lacus. Vestibulum eu tellus
-                        bibendum, convallis risus quis, lobortis libero.
+                        Desenvolvemos nomes para empreendimentos ou escritórios
+                        de arquitetura, levando em consideração toda a
+                        engenharia da escolha do nome e o design de sua logo.
                       </li>
                     </ul>
                   )}
@@ -269,7 +269,7 @@ const Test = () => {
                     onClick={() => handleSubItemClick(9)}
                   >
                     <div className={activeItem === 9 ? 'active' : ''}>
-                      <S.SubheaderTitle>CONCEITO ARTÍSTICO</S.SubheaderTitle>
+                      <S.SubheaderTitle>Conceito artístico</S.SubheaderTitle>
                     </div>
                     <S.SubArrow>
                       <img
@@ -282,9 +282,9 @@ const Test = () => {
                   {activeSubItem === 9 && (
                     <ul>
                       <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec interdum tempus lacus. Vestibulum eu tellus
-                        bibendum, convallis risus quis, lobortis libero.
+                        Produzimos estudos preliminares arquitetônicos e ideias
+                        artísticas. Com uma equipe altamente qualificada de
+                        arquitetos, conseguimos criar ideias para o seu negócio.
                       </li>
                     </ul>
                   )}
@@ -298,7 +298,7 @@ const Test = () => {
                   >
                     <div className={activeItem === 10 ? 'active' : ''}>
                       <S.SubheaderTitle>
-                        ESTUDOS ARQUITETÔNICOS
+                        Estudos arquitetônicos
                       </S.SubheaderTitle>
                     </div>
                     <S.SubArrow>
@@ -312,9 +312,9 @@ const Test = () => {
                   {activeSubItem === 10 && (
                     <ul>
                       <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec interdum tempus lacus. Vestibulum eu tellus
-                        bibendum, convallis risus quis, lobortis libero.
+                        Realizamos estudos arquitetônicos detalhados, explorando
+                        conceitos inovadores e soluções criativas para moldar o
+                        ambiente construído.
                       </li>
                     </ul>
                   )}
@@ -327,7 +327,7 @@ const Test = () => {
                     onClick={() => handleSubItemClick(11)}
                   >
                     <div className={activeItem === 11 ? 'active' : ''}>
-                      <S.SubheaderTitle>ESTUDO DE FACHADA</S.SubheaderTitle>
+                      <S.SubheaderTitle>Estudo de fachada</S.SubheaderTitle>
                     </div>
                     <S.SubArrow>
                       <img
@@ -340,37 +340,10 @@ const Test = () => {
                   {activeSubItem === 11 && (
                     <ul>
                       <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec interdum tempus lacus. Vestibulum eu tellus
-                        bibendum, convallis risus quis, lobortis libero.
-                      </li>
-                    </ul>
-                  )}
-                </S.SubHeader>
-              </S.DropdownContent>
-
-              <S.DropdownContent>
-                <S.SubHeader>
-                  <S.SubheaderTitleWrapper
-                    onClick={() => handleSubItemClick(12)}
-                  >
-                    <div className={activeItem === 12 ? 'active' : ''}>
-                      <S.SubheaderTitle>IDENTIDADE VISUAL</S.SubheaderTitle>
-                    </div>
-                    <S.SubArrow>
-                      <img
-                        className={activeSubItem === 12 ? 'active' : ''}
-                        src="img/arrow.png"
-                      />
-                    </S.SubArrow>
-                  </S.SubheaderTitleWrapper>
-
-                  {activeSubItem === 12 && (
-                    <ul>
-                      <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec interdum tempus lacus. Vestibulum eu tellus
-                        bibendum, convallis risus quis, lobortis libero.
+                        Com uma equipe de arquitetos qualificados, produzimos o
+                        design arquitetônico da fachada. A fachada do
+                        empreendimento é responsável pelas primeiras impressões
+                        do projeto.
                       </li>
                     </ul>
                   )}
@@ -416,37 +389,11 @@ const Test = () => {
                   {activeSubItem === 14 && (
                     <ul>
                       <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec interdum tempus lacus. Vestibulum eu tellus
-                        bibendum, convallis risus quis, lobortis libero.
-                      </li>
-                    </ul>
-                  )}
-                </S.SubHeader>
-              </S.DropdownContent>
-
-              <S.DropdownContent>
-                <S.SubHeader>
-                  <S.SubheaderTitleWrapper
-                    onClick={() => handleSubItemClick(15)}
-                  >
-                    <div className={activeItem === 15 ? 'active' : ''}>
-                      <S.SubheaderTitle>Gestão de Tráfego</S.SubheaderTitle>
-                    </div>
-                    <S.SubArrow>
-                      <img
-                        className={activeSubItem === 15 ? 'active' : ''}
-                        src="img/arrow.png"
-                      />
-                    </S.SubArrow>
-                  </S.SubheaderTitleWrapper>
-
-                  {activeSubItem === 15 && (
-                    <ul>
-                      <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec interdum tempus lacus. Vestibulum eu tellus
-                        bibendum, convallis risus quis, lobortis libero.
+                        Produzimos páginas web para seu empreendimento e
+                        escritório. Sites responsivos são necessários para
+                        trazer credibilidade ao seu negócio. Além dos sites
+                        profissionais, também desenvolvemos páginas de vendas e
+                        landing pages para a captação dos seus leads.
                       </li>
                     </ul>
                   )}

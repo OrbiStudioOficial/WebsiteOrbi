@@ -98,7 +98,6 @@ export const DropdownHeader = styled.div`
   font-weight: 800;
   line-height: normal;
   letter-spacing: 0.8px;
-  text-transform: uppercase;
 
   ${media.lessThan('large')`
   width: 60rem;

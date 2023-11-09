@@ -13,25 +13,25 @@ const projects: IServices[] = [
         title: 'Renders 3D',
         subtitle: 'Renders 3D',
         description:
-          'Nossa equipe de design cria uma identidade visual única para seus projetos, incorporando cores, tipografia e elementos gráficos que refletem a essência de sua visão.'
+          ' Modelagem 3D e produção de renders realistas para arquitetos e empreendimentos imobiliários.'
       },
       {
         title: 'Vídeos Institucionais',
         subtitle: 'Vídeos Institucionais',
         description:
-          'Desenvolvemos nomes poderosos e memoráveis para seus projetos, produtos ou empresas, garantindo que cada nome conte uma história e atraia seu público-alvo.'
+          ' Produzimos vídeos institucionais de lançamento, mesclando 3D e realidade. Com um roteiro elaborado por nós, esses vídeos ajudam na imersão do cliente em seu projeto.'
       },
       {
         title: 'Animações 3D',
         subtitle: 'Animações 3D',
         description:
-          'Criamos conceitos artísticos que representam visualmente a essência e a mensagem por trás do seu projeto.'
+          ' Animações totalmente em 3D, com ambientação, movimentos de câmera e elementos humanizados.'
       },
       {
         title: 'Plantas Humanizadas',
         subtitle: 'Plantas Humanizadas',
         description:
-          'Realizamos estudos arquitetônicos detalhados para garantir que cada aspecto do seu projeto seja funcional e esteticamente atraente, ao mesmo tempo em que atende a todas as especificações técnicas.'
+          ' Produzimos plantas 2D e 3D humanizadas, tornando seu material de divulgação mais imersivo e convincente, proporcionando uma maior profundidade aos olhos do cliente.'
       }
     ]
   },
@@ -39,52 +39,34 @@ const projects: IServices[] = [
     field: 'Desenvolvimento',
     subtitles: [
       {
-        title: 'Retratos 3D Realistas',
-        subtitle: 'Retratos 3D Realistas',
+        title: 'Identidade visual',
+        subtitle: 'Identidade visual',
         description:
-          'Criamos retratos 3D realistas que capturam a essência das pessoas e lugares, adicionando uma dimensão extra de realismo e emoção às suas imagens.'
+          'Desenvolvemos a identidade visual única e impactante para a sua empresa, transmitindo de forma visual a essência e valores que a tornam singular no mercado.'
       },
       {
-        title: 'Imagens',
-        subtitle: 'Imagens',
+        title: 'Naming',
+        subtitle: 'Naming',
         description:
-          'Produzimos imagens de alta qualidade que destacam os detalhes e a beleza de seus projetos, produtos ou ideias, deixando uma impressão duradoura.'
+          'Desenvolvemos nomes para empreendimentos ou escritórios de arquitetura, levando em consideração toda a engenharia da escolha do nome e o design de sua logo.'
       },
       {
-        title: 'Plantas',
-        subtitle: 'Plantas',
+        title: 'Conceito artístico',
+        subtitle: 'Conceito artístico',
         description:
-          'Nossas plantas de implantação humanizadas incorporam elementos que dão vida aos espaços, ajudando você a visualizar como as pessoas interagirão com o ambiente.'
+          'Produzimos estudos preliminares arquitetônicos e ideias artísticas. Com uma equipe altamente qualificada de arquitetos, conseguimos criar ideias para o seu negócio.'
       },
       {
-        title: 'Implantação Humanizada',
-        subtitle: 'Implantação Humanizada',
+        title: 'Estudos arquitetônicos',
+        subtitle: 'Estudos arquitetônicos',
         description:
-          'Nossas plantas de implantação humanizadas incorporam elementos que dão vida aos espaços, ajudando você a visualizar como as pessoas interagirão com o ambiente.'
+          ' Realizamos estudos arquitetônicos detalhados, explorando conceitos inovadores e soluções criativas para moldar o ambiente construído.'
       },
       {
-        title: 'Imagens Fachada',
-        subtitle: 'Imagens Fachada',
+        title: 'Estudo de fachada',
+        subtitle: 'Estudo de fachada',
         description:
-          'Produzimos imagens de alta qualidade que destacam os detalhes e a beleza de seus projetos, produtos ou ideias, deixando uma impressão duradoura.'
-      },
-      {
-        title: 'Foto Inserção',
-        subtitle: 'Foto Inserção',
-        description:
-          'Com a técnica de foto inserção, integramos perfeitamente elementos virtuais, como maquetes 3D e design de interiores, em imagens do mundo real. '
-      },
-      {
-        title: 'Vídeo De Lançamento',
-        subtitle: 'Vídeo De Lançamento',
-        description:
-          'Criamos vídeos de lançamento envolventes que contam a história por trás do seu projeto, produto ou empresa, gerando entusiasmo e interesse.'
-      },
-      {
-        title: 'Vídeo Animações 3D',
-        subtitle: 'Vídeo Animações 3D',
-        description:
-          'Nossas animações 3D dinâmicas explicam conceitos complexos de forma visualmente atraente, tornando-os acessíveis ao público.'
+          'Com uma equipe de arquitetos qualificados, produzimos o design arquitetônico da fachada. A fachada do empreendimento é responsável pelas primeiras impressões do projeto.'
       }
     ]
   },
@@ -95,13 +77,7 @@ const projects: IServices[] = [
         title: 'Websites',
         subtitle: 'Websites',
         description:
-          'Criamos websites impressionantes que representam sua marca, incorporando imagens 3D e visualizações para criar uma experiência digital envolvente.'
-      },
-      {
-        title: 'Gestão de Tráfego',
-        subtitle: 'Gestão de Tráfego',
-        description:
-          'Gerenciamos o tráfego direcionando estrategicamente visitantes para o seu site ou plataforma, maximizando sua presença online.'
+          'Produzimos páginas web para seu empreendimento e escritório. Sites responsivos são necessários para trazer credibilidade ao seu negócio. Além dos sites profissionais, também desenvolvemos páginas de vendas e landing pages para a captação dos seus leads.'
       }
     ]
   }
