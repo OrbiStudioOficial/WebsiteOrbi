@@ -20,6 +20,20 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#ED533F" />
         <meta name="Orbi Studio 3D" content="" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `async src="https://www.googletagmanager.com/gtag/js?id=G-7LDQ2YBSZF"`
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-7LDQ2YBSZF');`
+          }}
+        />
       </Head>
       <DefaultSeo {...SEO} />
       <GlobalStyles />
