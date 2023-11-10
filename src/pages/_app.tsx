@@ -9,6 +9,7 @@ import NextNprogress from 'nextjs-progressbar'
 
 import GlobalStyles from 'styles/global'
 import theme from 'styles/theme'
+import GoogleAnalytics from 'components/GoogleAnalytics'
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -19,21 +20,7 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" href="/img/logoorbi.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#ED533F" />
-        <meta name="Orbi Studio 3D" content="" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `async src="https://www.googletagmanager.com/gtag/js?id=G-7LDQ2YBSZF"`
-          }}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-7LDQ2YBSZF');`
-          }}
-        />
+        <meta name="Orbi Studio 3D" content="Orbi Studio 3D" />
       </Head>
       <DefaultSeo {...SEO} />
       <GlobalStyles />
@@ -43,6 +30,7 @@ function App({ Component, pageProps }: AppProps) {
         stopDelayMs={200}
         height={3}
       />
+      <GoogleAnalytics />
       <Component {...pageProps} />
     </ThemeProvider>
   )
