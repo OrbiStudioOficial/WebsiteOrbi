@@ -11,14 +11,14 @@ const GalleryTemplate = () => {
         <NextSeo
           title="Orbi | Galeria"
           description="Veja os principais projetos de renderização da Orbi."
-          canonical="https://orbi.com.br/galeria"
+          canonical="https://orbi3d.com/galeria"
           openGraph={{
-            url: 'https://orbi.com.br/galeria',
+            url: 'https://orbi3d.com/galeria',
             title: 'Orbi Studio | Galeria',
             description: 'Veja os principais projetos de renderização da Orbi.',
             images: [
               {
-                url: 'https://orbi.com.br/img/ORBI-512.png',
+                url: 'https://orbi3d.com/img/ORBI-512.png',
                 width: 1280,
                 height: 720,
                 alt: 'Orbio Studio'

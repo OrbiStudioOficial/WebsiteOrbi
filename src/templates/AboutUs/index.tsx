@@ -10,15 +10,15 @@ const AboutUs = () => {
       <NextSeo
         title="Orbi | Sobre"
         description="A empresa Orbi é referência no setor de renderização 3D onde a dedicação é produzir imagens realistas de alto nível."
-        canonical="https://orbi.com.br/sobre"
+        canonical="https://orbi3d.com/sobre"
         openGraph={{
-          url: 'https://orbi.com.br/sobre',
+          url: 'https://orbi3d.com/sobre',
           title: 'Orbi | Sobre',
           description:
             'A empresa Orbi é referência no setor de renderização 3D onde a dedicação é produzir imagens realistas de alto nível.',
           images: [
             {
-              url: 'https://orbi.com.br/img/ORBI-512.png',
+              url: 'https://orbi3d.com/img/ORBI-512.png',
               width: 1280,
               height: 720,
               alt: 'Orbio Studio'

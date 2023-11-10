@@ -9,15 +9,15 @@ const Contato = () => {
       <NextSeo
         title="Orbi | Contato"
         description="Entre em contato para realizar um orçamento ou saber mais informações sobre a empresa Orbi"
-        canonical="https://orbi.com.br/contato"
+        canonical="https://orbi3d.com/contato"
         openGraph={{
-          url: 'https://orbi.com.br/contato',
+          url: 'https://orbi3d.com/contato',
           title: 'Orbi Studio | Contato',
           description:
             'Entre em contato para realizar um orçamento ou saber mais informações sobre a empresa Orbi',
           images: [
             {
-              url: 'https://orbi.com.br/img/ORBI-512.png',
+              url: 'https://orbi3d.com/img/ORBI-512.png',
               width: 1280,
               height: 720,
               alt: 'Orbio Studio'

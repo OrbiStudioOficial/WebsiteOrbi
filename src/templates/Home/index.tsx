@@ -52,15 +52,15 @@ const Home = () => {
             <NextSeo
               title="Orbi | Início"
               description="Conheça sobre a empresa Orbi Studio, referência em renderizações 3D de ponta."
-              canonical="https://orbi.com.br/"
+              canonical="https://orbi3d.com/"
               openGraph={{
-                url: 'https://orbi.com.br/',
+                url: 'https://orbi3d.com/',
                 title: 'Orbi Studio | Início',
                 description:
                   'Conheça sobre a empresa Orbi Studio, referência em renderizações 3D de ponta.',
                 images: [
                   {
-                    url: 'https://orbi.com.br/img/ORBI-512.png',
+                    url: 'https://orbi3d.com/img/ORBI-512.png',
                     width: 1280,
                     height: 720,
                     alt: 'Orbio Studio'
