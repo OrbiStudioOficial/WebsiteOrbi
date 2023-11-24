@@ -66,7 +66,25 @@ const Gallery = () => {
     'img75.jpg',
     'img76.jpg',
     'img77.jpg',
-    'img78.jpg'
+    'img78.jpg',
+    'img79.jpg',
+    'img80.jpg',
+    'img81.jpg',
+    'img82.jpg',
+    'img83.jpg',
+    'img84.jpg',
+    'img85.jpg',
+    'img86.jpg',
+    'img87.jpg',
+    'img88.jpg',
+    'img89.jpg',
+    'img90.jpg',
+    'img91.jpg',
+    'img92.jpg',
+    'img93.jpg',
+    'img94.jpg',
+    'img95.jpg',
+    'img96.jpg'
   ]
 
   const imageVariants = {
